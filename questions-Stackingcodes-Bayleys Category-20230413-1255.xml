@@ -1,0 +1,4724 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- question: 0  -->
+  <question type="category">
+    <category>
+      <text>$course$/top/Bayley's Category</text>
+    </category>
+    <info format="html">
+      <text></text>
+    </info>
+    <idnumber></idnumber>
+  </question>
+
+<!-- question: 11119  -->
+  <question type="ordering">
+    <name>
+      <text>Griesmer Bound: Ordering the Proof</text>
+    </name>
+    <questiontext format="moodle_auto_format">
+      <text><![CDATA[<style id=theorem type="text/css"> 
+p.theorem{top:0px;
+padding-top:0;
+margin:auto; position:relative;
+width:500px;
+height:100%; float:left; background-color:#E4F2F9; border:3px; border-style:solid; border-color:#DDDDDC; padding: 1em; text-align:left;}
+</style>
+<ol type="a">
+
+<p> Consider the following theorem: </p>
+
+<p class="theorem">
+<b> Theorem: </b> Let \(C \subseteq \mathbb{F}_q \) be a linear \([n,k,d]\) code, where \(k \geq 1\).  Then we define the <i> Griesmer Bound </i> to be
+\[ \begin{aligned} n \: \geq \: \sum_{i=0}^{k-1} \: \Bigl\lceil{\frac{d}{q^i}}\Bigr\rceil. \end{aligned} \] </p>
+
+<p> Order the following steps to structure a proof by induction for this bound. </p>]]></text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <layouttype>VERTICAL</layouttype>
+    <selecttype>ALL</selecttype>
+    <selectcount>0</selectcount>
+    <gradingtype>ABSOLUTE_POSITION</gradingtype>
+    <showgrading>SHOW</showgrading>
+    <numberingstyle>none</numberingstyle>
+    <correctfeedback format="html">
+      <text>Your answer is correct.</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <answer fraction="1.0000000" format="moodle_auto_format">
+      <text>\(k=1\): Clearly \(\sum_{i=0}^{0}\Bigl\lceil{\frac{d}{q^0}}\Bigr\rceil = d\), and by definition \(n\geq d\), so the bound is true for the base case.</text>
+    </answer>
+    <answer fraction="2.0000000" format="moodle_auto_format">
+      <text><![CDATA[Now assume \(k>1\), and let \(\textbf{c} \in C\) be a codeword with wt(\(\textbf{c}\))\(=d.\)]]></text>
+    </answer>
+    <answer fraction="3.0000000" format="moodle_auto_format">
+      <text>Then by the for residual codes, Res(\(C,\textbf{c})\) is a \([n-d,k-1,d']\) code, with \(d' \geq \Bigl\lceil{\frac{d}{q}}\Bigr\rceil\).</text>
+    </answer>
+    <answer fraction="4.0000000" format="moodle_auto_format">
+      <text>Assume the Griesmer Bound holds for Res(\(C,\textbf{c})\).</text>
+    </answer>
+    <answer fraction="5.0000000" format="moodle_auto_format">
+      <text>Then \(n-1 \geq \sum_{i=0}^{k-2} \: \Bigl\lceil{\frac{d'}{q^i}}\Bigr\rceil \geq \sum_{i=0}^{k-2} \: \Bigl\lceil{\frac{d'}{q^{i+1}}}\Bigr\rceil \)</text>
+    </answer>
+    <answer fraction="6.0000000" format="moodle_auto_format">
+      <text>\( \implies n \geq d \sum_{i=0}^{k-2} \: \Bigl\lceil{\frac{d'}{q^{i+1}}}\Bigr\rceil \geq \sum_{i=0}^{k-1} \: \Bigl\lceil{\frac{d'}{q^{i+1}}}\Bigr\rceil \)</text>
+    </answer>
+  </question>
+
+<!-- question: 10529  -->
+  <question type="stack">
+    <name>
+      <text>Analysis I Proof</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<style id=theorem type="text/css"> 
+p.theorem{top:0px;
+padding-top:0;
+margin:auto; position:relative;
+width:500px;
+height:100%; float:left; background-color:#E4F2F9; border:3px; border-style:solid; border-color:#DDDDDC; padding: 1em; text-align:left;}
+</style>
+
+<p> Consider the following proof: </p>
+
+<p class="theorem">
+<b> Theorem: </b> Let \((x_n)_{n \in \mathbb{N}} \) be a sequence which is monotonically increasing, i.e. we have \(x_m \leq x_n \forall \, m \leq n.\)  If  \((x_n)_{n \in \mathbb{N}} \) is bounded, then it is convergent.
+<br>
+<b> Proof: </b>
+<br>
+1. We choose an upper limit to be \(x = \sup{\{x_n \in \mathbb{R} | n \in \mathbb{N}\}}.\)
+<br>
+2. We note \(X = \{x_n \in \mathbb{R} | n \in \mathbb{N}\} \) is bounded above.
+<br>
+3.  We need to show that \(x_n \longrightarrow x \) as \( n \longrightarrow \infty \).
+<br>
+4. Let \( \epsilon > 0.\) We need an \( n_0 \in \mathbb{N} \) such that \( |x_n-x|<\epsilon \) for all \( n \geq n_0 \).
+<br>
+5. Since \(x\) is the supremum of \(X\), \(x-\epsilon\) is not an upper bound for \(X\).
+<br>
+6. So there exists an \(x_{n_0} \in \, X\) with \(x-\epsilon < x_{n_0}\).
+<br>
+7. We have \(x-\epsilon < x_{n_0} \leq x_n < x+ \epsilon \) for all \(n \geq n_0\).
+<br>
+8. But this implies \(|x-x_n| < \epsilon \) for all \(n \geq n_0 \), which is what we need for convergence to \(x\).
+</p> 
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<p> a) In the proof above, where is the Completeness Axiom used?
+<br>[[input:ans1]] [[validation:ans1]]</p>
+
+<p> b) Where do we use the assumption that the sequence is bounded? <br>[[input:ans2]] [[validation:ans2]]</p>
+
+<p> c) Where do we use the assumption that the sequence is monotonically increasing?<br>[[input:ans3]] [[validation:ans3]]</p>
+
+<p> d) We require \((x_n)_{n \in \mathbb{N}} \) to be bounded.  Which are the following are true for a bounded sequence? <br>[[input:ans4]] [[validation:ans4]]</p>
+
+<p> e) Which of the following are <b> not </b> true for convergent sequences? <br>[[input:ans5]] [[validation:ans5]]</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <stackversion>
+      <text>2018080600</text>
+    </stackversion>
+    <questionvariables>
+      <text><![CDATA[partd: [[boundeddef, true, "If there exists a <i> C </i> &#8712 &#8477 , with <i> |x| </i> &#8804 <i>C</i>  for all<i>  x </i> &#8712 <i> X </i>, then <i> X </i> is bounded"], ["If for all <i> C </i> there exists an <i> m </i>, with <i> |x<sub>m</sub>| </i> &#8804 <i>C</i>  for all<i>  x </i> &#8712 <i> X </i>, then <i> X </i> is bounded", false], ["Given &#949>0 there is an integer <i>N</i> such that &#949< a<sub>n</sub> < <i>N</i> for all <i>n</i> &#8712  &#8469", false]];
+
+parte: [[1,false,"If x<sub>n</sub> converges to <i>M</i>, then x<sub>n</sub> has limit <i>M</i>"],[2,true,"We have x<sub>n</sub> &#8594  n as <i>M</i> &#8594 &#8734"], [3,false,"We have x<sub>n</sub> &#8594  <i> M </i> as n &#8594 &#8734"],[4,false,"For every &#949 > 0, there exists an index n<sub>0</sub> &#8712 &#8469 such that |x<sub>n</sub>-x|<&#949 for all n&#8804n<sub>0</sub>"], [5,true,"For every  n<sub>0</sub>> 0, there exists an index &#949 &#8712 &#8469 such that |x-&#949|< n<sub>0</sub> for all n&#8804n<sub>0</sub>"]]
+]]></text>
+    </questionvariables>
+    <specificfeedback format="html">
+      <text>[[feedback:prt1]]</text>
+    </specificfeedback>
+    <questionnote>
+      <text></text>
+    </questionnote>
+    <questionsimplify>1</questionsimplify>
+    <assumepositive>0</assumepositive>
+    <assumereal>0</assumereal>
+    <prtcorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:green;"><i class="fa fa-check"></i></span> Correct answer, well done.]]></text>
+    </prtcorrect>
+    <prtpartiallycorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:orange;"><i class="fa fa-adjust"></i></span> Your answer is partially correct.]]></text>
+    </prtpartiallycorrect>
+    <prtincorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:red;"><i class="fa fa-times"></i></span> Incorrect answer.]]></text>
+    </prtincorrect>
+    <multiplicationsign>none</multiplicationsign>
+    <sqrtsign>1</sqrtsign>
+    <complexno>i</complexno>
+    <inversetrig>cos-1</inversetrig>
+    <matrixparens>[</matrixparens>
+    <variantsselectionseed></variantsselectionseed>
+    <input>
+      <name>ans1</name>
+      <type>algebraic</type>
+      <tans>2</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>0</mustverify>
+      <showvalidation>0</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans2</name>
+      <type>algebraic</type>
+      <tans>2</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>0</mustverify>
+      <showvalidation>0</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans3</name>
+      <type>algebraic</type>
+      <tans>7</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>0</mustverify>
+      <showvalidation>0</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans4</name>
+      <type>checkbox</type>
+      <tans>partd</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>0</mustverify>
+      <showvalidation>0</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans5</name>
+      <type>checkbox</type>
+      <tans>parte</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>0</mustverify>
+      <showvalidation>0</showvalidation>
+      <options></options>
+    </input>
+    <prt>
+      <name>prt1</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackvariables>
+        <text></text>
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>1</sans>
+        <tans>1</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt1-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text></text>
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt1-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text></text>
+        </falsefeedback>
+      </node>
+    </prt>
+  </question>
+
+<!-- question: 6994  -->
+  <question type="stack">
+    <name>
+      <text>Basic Vector Addition In R3</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Given two vectors \(\vec{u}\) , \(\vec{v}\) in \(\mathbb{R}^3\)&nbsp;&nbsp;</p><p>\[ \begin{aligned} \vec{u} = {@U@}&nbsp; \qquad \vec{v} = {@V@} \qquad \vec{w} = {@W@} \end{aligned} \]&nbsp;&nbsp;</p><p>Calculate \(\vec{u}+\vec{v}\).</p>
+<p>\(\vec{u}+\vec{v}=\ \)[[input:ans1]] [[validation:ans1]]</p><p>Now find \(\vec{u}+\vec{v}+ \vec{w}\).</p><p>\(\vec{u}+\vec{v}+\vec{w}=\ \)[[input:ans2]] [[validation:ans2]]<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>2.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <stackversion>
+      <text>2018080600</text>
+    </stackversion>
+    <questionvariables>
+      <text>a: rand_with_step(-20, 20, 1)
+b: rand_with_step(-20, 20, 1)
+c: rand_with_step(-20, 20, 1)
+d: rand_with_step(-20, 20, 1)
+e: rand_with_step(-20, 20, 1)
+f: rand_with_step(-20, 20, 1)
+
+U: matrix( [a], [b], [c])
+V: matrix( [d], [e], [f])
+W: matrix( [b], [d], [a])
+/* U: rand([3 1]) */
+
+answer1: U+V
+answer2: U+V+W
+
+</text>
+    </questionvariables>
+    <specificfeedback format="html">
+      <text><![CDATA[[[feedback:prt1]]<br>[[feedback:prt2]]<br>]]></text>
+    </specificfeedback>
+    <questionnote>
+      <text>{@a@}</text>
+    </questionnote>
+    <questionsimplify>1</questionsimplify>
+    <assumepositive>0</assumepositive>
+    <assumereal>0</assumereal>
+    <prtcorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:green;"><i class="fa fa-check"></i></span> Correct answer, well done.]]></text>
+    </prtcorrect>
+    <prtpartiallycorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:orange;"><i class="fa fa-adjust"></i></span> Your answer is partially correct.]]></text>
+    </prtpartiallycorrect>
+    <prtincorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:red;"><i class="fa fa-times"></i></span> Incorrect answer.]]></text>
+    </prtincorrect>
+    <multiplicationsign>none</multiplicationsign>
+    <sqrtsign>1</sqrtsign>
+    <complexno>i</complexno>
+    <inversetrig>cos-1</inversetrig>
+    <matrixparens>(</matrixparens>
+    <variantsselectionseed></variantsselectionseed>
+    <input>
+      <name>ans1</name>
+      <type>matrix</type>
+      <tans>answer1</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans2</name>
+      <type>matrix</type>
+      <tans>answer2</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options></options>
+    </input>
+    <prt>
+      <name>prt1</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackvariables>
+        <text></text>
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans1</sans>
+        <tans>answer1</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt1-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text><![CDATA[<p dir="ltr" style="text-align: left;">Your answer for \(\vec{u}+\vec{v}\) is correct.</p>]]></text>
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt1-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text><![CDATA[<p dir="ltr" style="text-align: left;"><span style="font-size: 0.9375rem;">Your answer to \(\vec{u}+\vec{v}\) is incorrect.</span><br></p><p dir="ltr" style="text-align: left;">If we have&nbsp;</p><p dir="ltr" style="text-align: left;">\[ \begin{aligned} \vec{u} &amp;= \pmatrix{a \\ b \\ c} \\ \vec{v} &amp;= \pmatrix{d \\ e \\ f} \end{aligned}. \]</p><p dir="ltr" style="text-align: left;">Then:</p><p dir="ltr" style="text-align: left;">\[\vec{u} + \vec{v} = \pmatrix{a+d \\ b+e \\ c+f}. \]</p>]]></text>
+        </falsefeedback>
+      </node>
+    </prt>
+    <prt>
+      <name>prt2</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackvariables>
+        <text></text>
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans2</sans>
+        <tans>answer2</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt2-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text><![CDATA[<p dir="ltr" style="text-align: left;">Your answer to \(\vec{u}+\vec{v}+ \vec{w}\) is correct.</p>]]></text>
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt2-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text><![CDATA[<p dir="ltr"></p><p dir="ltr">Your answer to \(\vec{u}+\vec{v}+ \vec{w}\) is incorrect.</p><br><p dir="ltr">If we have&nbsp;</p><p dir="ltr"><br></p><p dir="ltr">\[ \begin{aligned} \vec{u} &amp;= \pmatrix{a \\ b \\ c} \\ \vec{v} &amp;= \pmatrix{d \\ e \\ f} \\ \vec{w} &amp;= \pmatrix{g \\ h \\ i} \end{aligned}. \]</p><p dir="ltr"><br></p><p dir="ltr">Then:</p><p dir="ltr"><br></p><p dir="ltr">\[\vec{u} + \vec{v} + \vec{w} = \pmatrix{a+d+g \\ b+e+h \\ c+f+i}. \]</p>]]></text>
+        </falsefeedback>
+      </node>
+    </prt>
+  </question>
+
+<!-- question: 10682  -->
+  <question type="stack">
+    <name>
+      <text>Codes Assignment Question</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<style id=theorem type="text/css"> 
+p.theorem{top:0px;
+padding-top:0;
+margin:auto; position:relative;
+width:500px;
+height:100%; float:left; background-color:#E4F2F9; border:3px; border-style:solid; border-color:#DDDDDC; padding: 1em; text-align:left;}
+</style>
+
+<p> Let \(C = \{\textbf{x} \in \mathbb{F}_7^5 \mid \textbf{x}A^t=0\}\) where</p>
+\[ \begin{aligned}  A={@A@}. \end{aligned} \] </p>
+<ol type="a">
+<li><p> Give a check-matrix \(H\), and a generator-matrix \(G\) for \(C\). 
+<br>\(H=\)[[input:ans1]] [[validation:ans1]] \(G=\)[[input:ans2]][[validation:ans2]] </p></li>
+
+<br>
+<li><p> Determine the parameters \(n,k,d\) of \(C\). </p>
+\(n=\) [[input:ans3]] [[validation:ans3]] &nbsp \(k=\) [[input:ans4]] [[validation:ans4]] &nbsp \(d=\) [[input:ans5]] [[validation:ans5]] </br></li>
+
+<br>
+<li><p>What are the parameters \(n',k',d'\) of the dual code \(C^\perp\)? </p>
+\(n'=\) [[input:ans6]] [[validation:ans6]] &nbsp \(k'=\) [[input:ans7]] [[validation:ans7]] &nbsp \(d'=\) [[input:ans8]] [[validation:ans8]] </br></li>
+
+<br>
+<li> Alice and Bob use the code \(C\), with syndrome decoding.  Alice encodes a message: no errors occur, and Bob is able to find the message.  Order the following steps to show how the generator and check-matrices are used for each stage of this process, giving your answer as a list (e.g. [1,2,3,4,5]). </li>
+</br> </p> 
+
+<p class="theorem">
+{@partd[3]@}. Bob finds the syndrome \( S(  \underline{c} ) \), and uses this to find the respective error vector \(\underline{x}\) in his look-up table.
+<br><br>
+{@partd[1]@}. Alice uses the generator matrix \(G\) for the code \(C\) to encode \({@encode@}\) by finding \(\underline{c} ={@encode@}G\).
+<br><br>
+{@partd[4]@}. Bob calculates \(\underline{w}=\underline{c}-\underline{x}\) to find the message \({@encode@}\).
+<br><br>
+{@partd[2]@}. Bob receives the word \(\underline{c}\).  To decode this he sets up a syndrome look-up table using the check-matrix \(H\) to find the syndromes and their respective error vectors.
+<br> <br>
+{@partd[5]@} To find the word Alice originally sent, Bob finds the message \({@message@}\) such that \({@message@}G = \underline{c}\).
+<br><br>
+ [[input:ans9]] [[validation:ans9]] 
+</p>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<li> What is the syndrome of the codeword \(\underline{c}\) in this case? <br>
+ \(S(\underline{c})= \: \)[[input:ans10]] [[validation:ans10]] </li>
+</ol>
+
+</p>]]></text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>4.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <stackversion>
+      <text>2018080600</text>
+    </stackversion>
+    <questionvariables>
+      <text><![CDATA[a: rand_with_step(1,8,1);
+
+/* s: 0; */
+/* for i: 1 while i <= 10 do s: s+i+j; */
+/* rrefgf(A,field) := block([Arrref, jb, m, n, i, j, k, p], m: 4, n: 5, Arref: A,  A: bfloat(A), field: bfloat(field), A: mod(A,field), i: 1, j: 1, jb = [],  while (i <= m) do (while (j <= n) do (k: search(true, sublist(A[i:m,j]), 1),  if isempty(k), then p: 0, else (k: i+k-1, p: A(k,j))))); */
+/* for i:1 and j: 1 while (i <= m) and (j <= n) do (i: i+j)) */
+/* find_indices(lambda([x], notequal(A[i+x-1][j],0)), makelist(x, x, i, m-i+1), 1); */
+/* rrefmod7(A) := block([Arref: A], fieldmod7(x) := mod(x, 7), for j: 1 thru ncols(A) do (pivots: sort(filter(lambda([i], fieldmod7(notequal(Arref[i][j]), 0)), makelist(i, i, j, nrows(A)))), if (length(pivots) > 0) then (jpiv: pivots[1], Arref[jpiv]: Arref[jpiv] / fieldmod7(Arref[jpiv][j]),for i: 1 thru nrows(A) do (if (not is(jpiv = i)) and (fieldmod7(notequal(Arref[i][j]), 0)) then (Arref[i]: Arref[i] - Arref[jpiv] * fieldmod7(gcd(Arref[i][j], Arref[jpiv][j]))*(Arref[i][j] / fieldmod7(gcd(Arref[i][j], Arref[jpiv][j]))*(Arref[jpiv])))))), return(Arref)); */
+
+
+
+matA: [matrix([1,5,6,0,3],[6,4,5,0,3],[2,4,1,2,3],[2,5,6,5,2]), matrix([2,3,6,5,4],[3,3,6,4,0],[0,0,0,0,3],[2,3,6,5,0]), matrix([3,0,2,5,6],[0,4,5,6,2],[2,4,6,2,2],[2,1,2,6,4]), matrix([1,2,2,0,1],[0,0,2,1,0],[5,3,2,1,4],[4,1,2,2,3]), matrix([0,1,2,3,4],[1,1,1,1,1],[3,1,4,2,0],[5,6,5,5,5]), matrix([1,2,0,5,3],[6,4,2,5,0],[5,0,2,3,0],[6,5,0,2,4]), matrix([2,5,6,1,0],[3,2,4,2,2],[5,1,6,4,0],[3,1,4,0,2]), matrix([5,3,2,5,1],[6,2,3,0,0],[3,5,6,3,2],[4,5,5,5,1])]
+
+checkmatA: [matrix([1,0,0,0,6],[0,1,0,0,1],[0,0,1,0,1],[0,0,0,1,0]), matrix([1,0,0,6,0],[0,1,2,0,0],[0,0,0,0,1]), matrix([1,0,0,1,0],[0,1,0,2,0],[0,0,1,1,0],[0,0,0,0,1]), matrix([1,2,0,0,5],[0,0,1,0,5],[0,0,0,1,4]), matrix([1,0,0,0,0],[0,1,0,0,0],[0,0,1,0,6],[0,0,0,1,2]), matrix([1,0,0,1,6],[0,1,0,2,2],[0,0,1,6,6]), matrix([1,0,0,0,2],[0,1,0,0,3],[0,0,1,0,0],[0,0,0,1,2]), matrix([1,0,0,0,0],[0,1,0,3,2],[0,0,1,5,1])]
+
+A: matA[a]
+egans: checkmatA[a]
+
+genmatA: [matrix([1,6,6,0,1]), matrix([0,5,1,0,0],[1,0,0,1,0]), matrix([6,5,6,1,0]), matrix([5,1,0,0,0],[2,0,2,3,1]), matrix([0,0,1,5,1]), matrix([6,5,1,1,0],[1,5,1,0,1]), matrix([5,4,0,5,1]), matrix([0,4,2,1,0],[0,5,6,0,1])]
+
+G:genmatA[a];
+n:5;
+kmat: [1,2,1,2,1,2,1,2];
+k: kmat[a];
+dmat: [4,3,4,3,4,3,4,3];
+d: dmat[a];
+
+nprime:5;
+kpmat:[4,3,4,3,4,3,4,3];
+kprime:kpmat[a];
+dpmat:[1,2,1,2,1,2,1,2];
+dprime:dpmat[a];
+
+partd: random_permutation([1,2,3,4,5]);
+
+l1: makelist(i,i,0,6);
+Fcodes: apply(cartesian_product, makelist(setify(l1), k,1, length(G)));
+Fcodes: listify(Fcodes);
+codes: setify(makelist(mod((Fcodes[i]).G,7), i, 1, 7^(length(G))));
+
+
+
+Fcheck: apply(cartesian_product, makelist(setify(l1),k,1,length(egans)));
+Fcheck: listify(Fcheck);
+checkmatrixcode: setify(makelist(mod((Fcheck[i]).egans,7), i, 1, 7^(length(egans))));
+
+
+
+encodelist: [[1],[1,2],[1],[1,2],[1],[1,2],[1],[1,2]];
+encode: encodelist[a];
+messagelist: [["m"],["m", " n"],["m"],["m", "n"],["m"],["m", "n"],["m"],["m", "n"]];
+message: messagelist[a];
+
+syndromelist: [matrix([0,0,0,0]), matrix([0,0,0]), matrix([0,0,0,0]), matrix([0,0,0]), matrix([0,0,0,0]), matrix([0,0,0]), matrix([0,0,0,0]), matrix([0,0,0])];
+syndrome: syndromelist[a];
+
+
+
+]]></text>
+    </questionvariables>
+    <specificfeedback format="html">
+      <text><![CDATA[<p>Part a)
+[[feedback:prt1]]
+</p>
+<hr>
+<p> Part b)
+[[feedback:prt2]]
+</p>
+<hr>
+<p> Part c)
+[[feedback:prt3]]
+</p>
+<hr>
+<p> Parts d) and e)
+[[feedback:prt4]]
+</p>]]></text>
+    </specificfeedback>
+    <questionnote>
+      <text>{@A@}, rref= {@egans@}, stepordering = {@partd@}</text>
+    </questionnote>
+    <questionsimplify>1</questionsimplify>
+    <assumepositive>0</assumepositive>
+    <assumereal>0</assumereal>
+    <prtcorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:green;"><i class="fa fa-check"></i></span> Correct answer, well done.]]></text>
+    </prtcorrect>
+    <prtpartiallycorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:orange;"><i class="fa fa-adjust"></i></span> Your answer is partially correct.]]></text>
+    </prtpartiallycorrect>
+    <prtincorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:red;"><i class="fa fa-times"></i></span> Incorrect answer.]]></text>
+    </prtincorrect>
+    <multiplicationsign>none</multiplicationsign>
+    <sqrtsign>1</sqrtsign>
+    <complexno>i</complexno>
+    <inversetrig>cos-1</inversetrig>
+    <matrixparens>(</matrixparens>
+    <variantsselectionseed></variantsselectionseed>
+    <input>
+      <name>ans1</name>
+      <type>matrix</type>
+      <tans>egans</tans>
+      <boxsize>1</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans10</name>
+      <type>matrix</type>
+      <tans>syndrome</tans>
+      <boxsize>3</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans2</name>
+      <type>matrix</type>
+      <tans>G</tans>
+      <boxsize>1</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans3</name>
+      <type>algebraic</type>
+      <tans>n</tans>
+      <boxsize>5</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>0</mustverify>
+      <showvalidation>0</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans4</name>
+      <type>algebraic</type>
+      <tans>k</tans>
+      <boxsize>5</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>0</mustverify>
+      <showvalidation>0</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans5</name>
+      <type>algebraic</type>
+      <tans>d</tans>
+      <boxsize>5</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>0</mustverify>
+      <showvalidation>0</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans6</name>
+      <type>algebraic</type>
+      <tans>nprime</tans>
+      <boxsize>5</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>0</mustverify>
+      <showvalidation>0</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans7</name>
+      <type>algebraic</type>
+      <tans>kprime</tans>
+      <boxsize>5</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>0</mustverify>
+      <showvalidation>0</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans8</name>
+      <type>algebraic</type>
+      <tans>dprime</tans>
+      <boxsize>5</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>0</mustverify>
+      <showvalidation>0</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans9</name>
+      <type>algebraic</type>
+      <tans>partd</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options></options>
+    </input>
+    <prt>
+      <name>prt1</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackvariables>
+        <text>studentcode: setify(makelist(mod((Fcodes[i]).ans2,7), i, 1, 7^length(G)));
+a: is(equal(codes, studentcode))
+
+studentcheckmatrixcode: setify(makelist(mod((Fcheck[i]).ans1,7), i, 1, 7^length(egans)));
+b: is(equal(checkmatrixcode, studentcheckmatrixcode))</text>
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>b</sans>
+        <tans>true</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>0.5000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>1</truenextnode>
+        <trueanswernote>prt1-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text><![CDATA[<p> Your answer for the \(H\) is correct. </p>]]></text>
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>1</falsenextnode>
+        <falseanswernote>prt1-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text><![CDATA[<p> To correctly find a check-matrix \(H\) for the code \(C\) we take \(A\) as an acting generator matrix, and compute the RREF of the matrix over the field \(\mathbb{F}_7\). <br>
+Converting {@A@} into RREF, we get {@egans@} as a possible check-matrix \(H\).
+</p>]]></text>
+        </falsefeedback>
+      </node>
+      <node>
+        <name>1</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>a</sans>
+        <tans>true</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>+</truescoremode>
+        <truescore>0.5000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt1-2-T</trueanswernote>
+        <truefeedback format="html">
+          <text><![CDATA[<p> Your answer for the \(G\) is correct. </p>]]></text>
+        </truefeedback>
+        <falsescoremode>-</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt1-2-F</falseanswernote>
+        <falsefeedback format="html">
+          <text><![CDATA[<p> Given that we know a check-matrix \(H\) for the code \(C\) we can use the \(G \leftrightarrow H \) algorithm to find the corresponding generator matrix. </p>]]></text>
+        </falsefeedback>
+      </node>
+    </prt>
+    <prt>
+      <name>prt2</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackvariables>
+        <text></text>
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans3</sans>
+        <tans>n</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>0.3300000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>1</truenextnode>
+        <trueanswernote>prt2-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text><![CDATA[<p> Your answer for \(n\) is correct. </p>]]></text>
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>1</falsenextnode>
+        <falseanswernote>prt2-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text><![CDATA[<p> Your answer for \(n\) is incorrect.  Recall that \(n\) is the length of the code (i.e. the number of columns in the generator matrix). </p>]]></text>
+        </falsefeedback>
+      </node>
+      <node>
+        <name>1</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans4</sans>
+        <tans>k</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>+</truescoremode>
+        <truescore>0.3300000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>2</truenextnode>
+        <trueanswernote>prt2-2-T</trueanswernote>
+        <truefeedback format="html">
+          <text><![CDATA[<p> Your answer for \(k\) is correct. </p>]]></text>
+        </truefeedback>
+        <falsescoremode>-</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>2</falsenextnode>
+        <falseanswernote>prt2-2-F</falseanswernote>
+        <falsefeedback format="html">
+          <text><![CDATA[<p> Your answer for \(k\) is incorrect.  Recall that \(k\) is the <i> dimension </i> of a linear code \(C\).  We find \(k\) by looking at the number of rows in \(G\). </p>]]></text>
+        </falsefeedback>
+      </node>
+      <node>
+        <name>2</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans5</sans>
+        <tans>d</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>+</truescoremode>
+        <truescore>0.3400000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt2-3-T</trueanswernote>
+        <truefeedback format="html">
+          <text><![CDATA[<p> Your answer for \(d\) is correct. </p>]]></text>
+        </truefeedback>
+        <falsescoremode>-</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt2-3-F</falseanswernote>
+        <falsefeedback format="html">
+          <text><![CDATA[<p> Your answer for \(d\) is incorrect.  Recall that \(d\) is the <i> minimum distance</i> of a linear code \(C\).  We find \(d\) by finding the smallest set of linearly dependent columns in \(H\). </p>]]></text>
+        </falsefeedback>
+      </node>
+    </prt>
+    <prt>
+      <name>prt3</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackvariables>
+        <text></text>
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans6</sans>
+        <tans>nprime</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>0.3300000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>1</truenextnode>
+        <trueanswernote>prt3-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text><![CDATA[<p> Your answer for \(n'\) is correct. </p>]]></text>
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>1</falsenextnode>
+        <falseanswernote>prt3-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text><![CDATA[<p> Your answer for \(n'\) is incorrect. Recall that \(n'\) is the length of the dual code (i.e. the number of columns in the generator matrix for \(C^{\perp}\)).</p>]]></text>
+        </falsefeedback>
+      </node>
+      <node>
+        <name>1</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans7</sans>
+        <tans>kprime</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>+</truescoremode>
+        <truescore>0.3300000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>2</truenextnode>
+        <trueanswernote>prt3-2-T</trueanswernote>
+        <truefeedback format="html">
+          <text><![CDATA[<p> Your answer for \(k'\) is correct. </p>]]></text>
+        </truefeedback>
+        <falsescoremode>-</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>2</falsenextnode>
+        <falseanswernote>prt3-2-F</falseanswernote>
+        <falsefeedback format="html">
+          <text><![CDATA[<p> Your answer for \(k'\) is incorrect.  Recall that \(k'\) is the <i> dimension </i> of our linear code \(C^{\perp}\).  We find \(k'\) by looking at the number of rows in \(G\).</p>]]></text>
+        </falsefeedback>
+      </node>
+      <node>
+        <name>2</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans8</sans>
+        <tans>dprime</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>+</truescoremode>
+        <truescore>0.3400000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt3-3-T</trueanswernote>
+        <truefeedback format="html">
+          <text><![CDATA[<p> Your answer for \(d'\) is correct. </p>]]></text>
+        </truefeedback>
+        <falsescoremode>-</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt3-3-F</falseanswernote>
+        <falsefeedback format="html">
+          <text><![CDATA[<p> Your answer for \(d'\) is incorrect.  Recall that \(d'\) is the <i> minimum distance</i> of a linear code \(C^{\perp}\).  We find \(d'\) by finding the smallest set of linearly dependent columns in \(H\). </p>]]></text>
+        </falsefeedback>
+      </node>
+    </prt>
+    <prt>
+      <name>prt4</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackvariables>
+        <text></text>
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans9</sans>
+        <tans>partd</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>0.5000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>1</truenextnode>
+        <trueanswernote>prt4-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text><![CDATA[<p> Your answer for part d) is correct. </p>]]></text>
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>1</falsenextnode>
+        <falseanswernote>prt4-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text><![CDATA[<p> Your answer for d) is incorrect.  Consider the stages of syndrome decoding, which require a syndrome look-up table to decode a received word \(w\). </p>]]></text>
+        </falsefeedback>
+      </node>
+      <node>
+        <name>1</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans10</sans>
+        <tans>syndrome</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>+</truescoremode>
+        <truescore>0.5000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt4-2-T</trueanswernote>
+        <truefeedback format="html">
+          <text><![CDATA[<p> Your answer for e) is correct. </p>]]></text>
+        </truefeedback>
+        <falsescoremode>-</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt4-2-F</falseanswernote>
+        <falsefeedback format="html">
+          <text><![CDATA[<p> Your answer for e) is incorrect. The syndrome is defined as \(S(\textbf{y})= \textbf{y} H^t\), for a received word \(\textbf{y}\) and \(H\) our check matrix. <br> Note that if no errors occur, the received word must be a codeword. </p>]]></text>
+        </falsefeedback>
+      </node>
+    </prt>
+    <deployedseed>1074446018</deployedseed>
+    <deployedseed>1373826804</deployedseed>
+    <deployedseed>361690895</deployedseed>
+    <deployedseed>240746444</deployedseed>
+    <deployedseed>908292737</deployedseed>
+    <deployedseed>581764893</deployedseed>
+    <deployedseed>496726057</deployedseed>
+    <deployedseed>190849578</deployedseed>
+    <deployedseed>845425208</deployedseed>
+    <deployedseed>1101325076</deployedseed>
+    <deployedseed>1546355372</deployedseed>
+    <deployedseed>173478137</deployedseed>
+    <deployedseed>179767079</deployedseed>
+    <deployedseed>941243857</deployedseed>
+    <deployedseed>1545900626</deployedseed>
+    <deployedseed>987134373</deployedseed>
+    <deployedseed>1972645334</deployedseed>
+    <deployedseed>1791497812</deployedseed>
+    <deployedseed>558979489</deployedseed>
+    <deployedseed>1187918149</deployedseed>
+    <deployedseed>1825116466</deployedseed>
+    <deployedseed>1004857937</deployedseed>
+    <deployedseed>1465395125</deployedseed>
+    <deployedseed>1161985768</deployedseed>
+    <deployedseed>2146879445</deployedseed>
+    <deployedseed>312741755</deployedseed>
+    <deployedseed>1101194732</deployedseed>
+    <qtest>
+      <testcase>1</testcase>
+      <testinput>
+        <name>ans1</name>
+        <value>egans</value>
+      </testinput>
+      <testinput>
+        <name>ans2</name>
+        <value>G</value>
+      </testinput>
+      <testinput>
+        <name>ans3</name>
+        <value>n</value>
+      </testinput>
+      <testinput>
+        <name>ans4</name>
+        <value>k</value>
+      </testinput>
+      <testinput>
+        <name>ans5</name>
+        <value>d</value>
+      </testinput>
+      <testinput>
+        <name>ans6</name>
+        <value>nprime</value>
+      </testinput>
+      <testinput>
+        <name>ans7</name>
+        <value>ev(kprime+1,simp)</value>
+      </testinput>
+      <testinput>
+        <name>ans8</name>
+        <value>dprime</value>
+      </testinput>
+      <expected>
+        <name>prt1</name>
+        <expectedscore>1.0000000</expectedscore>
+        <expectedpenalty>0.0000000</expectedpenalty>
+        <expectedanswernote>prt1-2-T</expectedanswernote>
+      </expected>
+      <expected>
+        <name>prt2</name>
+        <expectedscore>1.0000000</expectedscore>
+        <expectedpenalty>0.0000000</expectedpenalty>
+        <expectedanswernote>prt2-3-T</expectedanswernote>
+      </expected>
+      <expected>
+        <name>prt3</name>
+        <expectedscore>0.6700000</expectedscore>
+        <expectedpenalty>0.0000000</expectedpenalty>
+        <expectedanswernote>prt3-3-T</expectedanswernote>
+      </expected>
+    </qtest>
+  </question>
+
+<!-- question: 11121  -->
+  <question type="stack">
+    <name>
+      <text>Comparison of Bounds</text>
+    </name>
+    <questiontext format="moodle_auto_format">
+      <text><![CDATA[<p> Calculate the Plotkin, Singleton and Sphere-Covering bounds, given a \(q-\text{ary}\) linear code where \(q=\) {@q@}, \(n=\) {@n@}, and \(d={@d@}\). </p>
+
+<p>Plotkin Bound: \(A_q(n,d) \) [[input:ans6]] [[validation:ans6]] [[input:ans1]] [[validation:ans1]]</p>
+<p>Singleton Bound: \(A_q(n,d)\)  [[input:ans7]] [[validation:ans7]] [[input:ans2]] [[validation:ans2]]</p>
+<p>Sphere-Covering Bound: \(A_q(n,d)\)  [[input:ans8]] [[validation:ans8]] [[input:ans3]] [[validation:ans3]]</p>
+
+<br><br><br>
+
+
+<p> Given that \( A_q(nm,dm) \geq A_q(n,d) \), and using the Plotkin bound for binary codes: <br>
+<p> What is \(A_2(3m, 2m)\) for \(m \geq 1\)? <br> [[input:ans4]] [[validation:ans4]]</p>
+<p> What is \(A_2(3m, 2m+1)\) for \(m \geq 1 \)? <br> [[input:ans5]] [[validation:ans5]]</p>
+<p> (Hint: Consider both sides of the equality to then establish an equality) </p>]]></text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format">
+      <text><![CDATA[<p> For the first 3 questions, we apply the Plotkin, Singleton and Sphere Covering bounds, namely:
+<ui>
+<li> \(A_q(n,d) \leq \Bigl\lfloor(\frac{d}{d-rn})\Bigr\rfloor\) </li>
+<br>
+<li> \(A_q(n,d) \leq q^{n-d+1}\) </li>
+<br>
+<li> \( \frac{q^n}{\sum_{i=0}^{d-1}\binom{n}{i}(q-1)^i} \leq A_q(n,d) \) </li>
+</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <stackversion>
+      <text>2018080600</text>
+    </stackversion>
+    <questionvariables>
+      <text><![CDATA[d: rand_with_step(2,10,1)
+n: rand_with_step(2,6,1)
+q: rand_with_step(2,6,1)
+r: 1-q^(-1)
+k: rand_with_step(2,5,1)
+rn: r*n
+
+while d>n do d: rand_with_step(2,10,1)
+
+plotkin: floor(d/(d-r*n))
+singleton: q^(n-d+1)
+spherecover: (q^n)/ (sum((binomial(n,i)*(q-1)^i), i, 0, d-1))
+
+a: [["&#8805", false], ["&#8804", true]];
+c: [["&#8805", true], ["&#8804", false]];]]></text>
+    </questionvariables>
+    <specificfeedback format="html">
+      <text><![CDATA[[[feedback:prt1]]
+<hr>
+[[feedback:prt2]]
+<hr>
+[[feedback:prt3]]
+<hr>
+[[feedback:prt4]]
+<hr>
+[[feedback:prt5]]]]></text>
+    </specificfeedback>
+    <questionnote>
+      <text>{@rn@} less than {@d@}?  {@plotkin@}</text>
+    </questionnote>
+    <questionsimplify>1</questionsimplify>
+    <assumepositive>0</assumepositive>
+    <assumereal>0</assumereal>
+    <prtcorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:green;"><i class="fa fa-check"></i></span> Correct answer, well done.]]></text>
+    </prtcorrect>
+    <prtpartiallycorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:orange;"><i class="fa fa-adjust"></i></span> Your answer is partially correct.]]></text>
+    </prtpartiallycorrect>
+    <prtincorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:red;"><i class="fa fa-times"></i></span> Incorrect answer.]]></text>
+    </prtincorrect>
+    <multiplicationsign>none</multiplicationsign>
+    <sqrtsign>1</sqrtsign>
+    <complexno>i</complexno>
+    <inversetrig>cos-1</inversetrig>
+    <matrixparens>[</matrixparens>
+    <variantsselectionseed></variantsselectionseed>
+    <input>
+      <name>ans1</name>
+      <type>algebraic</type>
+      <tans>plotkin</tans>
+      <boxsize>5</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans2</name>
+      <type>algebraic</type>
+      <tans>singleton</tans>
+      <boxsize>5</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans3</name>
+      <type>algebraic</type>
+      <tans>spherecover</tans>
+      <boxsize>5</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans4</name>
+      <type>algebraic</type>
+      <tans>4</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans5</name>
+      <type>algebraic</type>
+      <tans>2</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans6</name>
+      <type>dropdown</type>
+      <tans>a</tans>
+      <boxsize>3</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans7</name>
+      <type>dropdown</type>
+      <tans>a</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans8</name>
+      <type>dropdown</type>
+      <tans>c</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options></options>
+    </input>
+    <prt>
+      <name>prt1</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackvariables>
+        <text></text>
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans1</sans>
+        <tans>plotkin</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>acorrect</trueanswernote>
+        <truefeedback format="html">
+          <text><![CDATA[<p> Your answer for the Plotkin bound is correct </p>]]></text>
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>1</falsenextnode>
+        <falseanswernote>aincorrect</falseanswernote>
+        <falsefeedback format="html">
+          <text><![CDATA[<p> Your answer for the Plotkin bound is incorrect </p>]]></text>
+        </falsefeedback>
+      </node>
+      <node>
+        <name>1</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans1</sans>
+        <tans>plotkin+1</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>+</truescoremode>
+        <truescore>0.0000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>aceiling</trueanswernote>
+        <truefeedback format="html">
+          <text><![CDATA[<p> You have calculated the ceiling, rather than the floor of the expression </p>]]></text>
+        </truefeedback>
+        <falsescoremode>-</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt1-2-F</falseanswernote>
+        <falsefeedback format="html">
+          <text></text>
+        </falsefeedback>
+      </node>
+    </prt>
+    <prt>
+      <name>prt2</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackvariables>
+        <text></text>
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans2</sans>
+        <tans>singleton</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt2-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text><![CDATA[<p> Your answer for the Singleton bound is correct </p>]]></text>
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt2-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text><![CDATA[<p> Your answer for the Singleton bound is incorrect </p>]]></text>
+        </falsefeedback>
+      </node>
+    </prt>
+    <prt>
+      <name>prt3</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackvariables>
+        <text></text>
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans3</sans>
+        <tans>spherecover</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt3-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text><![CDATA[<p> Your answer for the Sphere Covering bound is correct </p>]]></text>
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt3-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text><![CDATA[<p> Your answer for the Sphere Covering bound is incorrect </p>]]></text>
+        </falsefeedback>
+      </node>
+    </prt>
+    <prt>
+      <name>prt4</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackvariables>
+        <text></text>
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans4</sans>
+        <tans>4</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt4-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text><![CDATA[<p> Your answer for \(A_2(3m, 2m)\) is correct </p>]]></text>
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt4-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text><![CDATA[<p> Your answer for \(A_2(3m, 2m)\) is incorrect <br>
+To find this we first need to consider the Plotkin Bound for binary codes, substituting \(3m\) and \(2m\) into our equation for the <b> even </b> case to find an upper limit for \(A\). <br>
+Then to consider the hint within the question to find that \(A_2(3m,2m) \geq A_2(3,2)\), which can then be bounded below by the same integer found for the upper limit. <br>
+Hence we then have the required result. </p>]]></text>
+        </falsefeedback>
+      </node>
+    </prt>
+    <prt>
+      <name>prt5</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackvariables>
+        <text></text>
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans5</sans>
+        <tans>2</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt5-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text><![CDATA[<p> Your answer for \(A_2(3m, 2m+1)\) is correct </p>]]></text>
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt5-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text><![CDATA[<p> Your answer for \(A_2(3m, 2m+1)\) is incorrect <br>
+To find this we first need to consider the Plotkin Bound for binary codes, substituting \(3m\) and \(2m\) into our equation for the <b> odd</b> case to find an upper limit for \(A\). <br>
+Then to consider the hint within the question, which then shows \(A_2(3m,2m+1)\) can be bounded below by the same integer found for the upper limit. <br>
+Hence we then have the required result. </p>]]></text>
+        </falsefeedback>
+      </node>
+    </prt>
+    <deployedseed>562127882</deployedseed>
+    <deployedseed>1485837494</deployedseed>
+    <deployedseed>1705651021</deployedseed>
+    <deployedseed>828649840</deployedseed>
+    <deployedseed>1042801582</deployedseed>
+    <deployedseed>1439017440</deployedseed>
+    <deployedseed>1717560840</deployedseed>
+    <deployedseed>703007070</deployedseed>
+    <deployedseed>1124512515</deployedseed>
+    <deployedseed>415253111</deployedseed>
+    <deployedseed>1855207863</deployedseed>
+    <deployedseed>456995674</deployedseed>
+    <deployedseed>449213742</deployedseed>
+    <deployedseed>1612342571</deployedseed>
+    <deployedseed>1581803600</deployedseed>
+    <deployedseed>1141278536</deployedseed>
+    <deployedseed>1846668560</deployedseed>
+    <deployedseed>530755729</deployedseed>
+  </question>
+
+<!-- question: 11118  -->
+  <question type="stack">
+    <name>
+      <text>Griesmer Bound: Proof Comprehension</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<style id=theorem type="text/css"> 
+p.theorem{top:0px;
+padding-top:0;
+margin:auto; position:relative;
+width:500px;
+height:100%; float:left; background-color:#E4F2F9; border:3px; border-style:solid; border-color:#DDDDDC; padding: 1em; text-align:left;}
+</style>
+<ol type="a">
+
+<p> Consider the following theorem: </p>
+
+<p class="theorem">
+<b> Theorem: </b> Let \(C \subseteq \mathbb{F}_q \) be a linear \([n,k,d]\) code, where \(k \geq 1\).  Then we define the <i> Griesmer Bound </i> to be
+\[ \begin{aligned} n \: \geq \: \sum_{i=0}^{k-1} \: \Bigl\lceil{\frac{d}{q^i}}\Bigr\rceil. \end{aligned} \]
+<b> Proof: </b> <br>
+We prove by induction: <br>
+1. \(k=1:\) We have \(\sum_{i=0}^{0}\Bigl\lceil{\frac{d}{q^0}}\Bigr\rceil = d \) so true for base case.
+<br>
+2. Assume \(k > 1 \), and let \(\textbf{c} \in C\) be a codeword with wt(\(\textbf{c})=d\).
+<br>
+3. We have that Res(\(C, \textbf{c}\)) is a \([n-d,k-1,d']\) code.
+<br>
+4. So we have \[\begin{aligned} n-1 \geq \sum_{i=0}^{k-2} \: \Bigl\lceil{\frac{d'}{q^i}}\Bigr\rceil \geq \sum_{i=0}^{k-2} \: \Bigl\lceil{\frac{d'}{q^{i+1}}}\Bigr\rceil \end{aligned} \]
+<br>
+5. This implies: \[\begin{aligned} n \geq d \sum_{i=0}^{k-2} \: \Bigl\lceil{\frac{d'}{q^{i+1}}}\Bigr\rceil \geq \sum_{i=0}^{k-1} \: \Bigl\lceil{\frac{d'}{q^{i+1}}}\Bigr\rceil \end{aligned} \] 
+<br> 
+And so the bound holds.
+</p>
+
+<p> At what stage do we first use that as \(n \geq d\), the bound is true? <br>[[input:ans1]] [[validation:ans1]]</p>
+
+<p> Where do we apply the Lemma that if wt(\(\textbf{c})=d\) then Res(\(C,\textbf{c}\)) is an \([n-d,k-1,d]\) code?<br>
+[[input:ans2]] [[validation:ans2]]</p>
+
+<p> For the lemma above, we assume \(d'\) is greater than or equal to the ceiling of what fraction? <br>
+[[input:ans3]] [[validation:ans3]] </p>
+
+<p> Which of the following are correct statements for the weight of a codeword \(\textbf{c}\)? <br>
+[[input:ans4]] [[validation:ans4]] </p>
+
+<p> Which stage do we use the assumption that the Griesmer Bound holds for Res(\(C, \textbf{c})\)? <br>
+[[input:ans5]] [[validation:ans5]] </p>]]></text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <stackversion>
+      <text>2018080600</text>
+    </stackversion>
+    <questionvariables>
+      <text><![CDATA[part4: random_permutation([[1,true, "The Hamming weight is the number of non-zero symbols in a word <b> c </b>."] , [2, false, "The Hamming weight is the number of zero symbols in a word <b> c </b>."], [3, true, "If x,y &#8712 <b> F<sub>q</sub>  </b> then d(x,y) = wt(x-y)."], [4, false, "If x,,y &#8712 <b> F<sub>n</sub> </b> then d(x,y) = wt(x+y)."], [5, true, "The Residual code is of length n-wt(<b>c</b>)."], [6, false, "The Residual code is of length n+wt(<b>c</b>)."],[7, false, "The Hamming weight can only be found for linear codes."]])
+
+dlist: [part4[1][1],part4[2][1],part4[3][1],part4[4][1]]
+
+partd: [part4[1],part4[2],part4[3],part4[4]]
+]]></text>
+    </questionvariables>
+    <specificfeedback format="html">
+      <text>[[feedback:prt1]]</text>
+    </specificfeedback>
+    <questionnote>
+      <text>dlist={@dlist@}</text>
+    </questionnote>
+    <questionsimplify>1</questionsimplify>
+    <assumepositive>0</assumepositive>
+    <assumereal>0</assumereal>
+    <prtcorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:green;"><i class="fa fa-check"></i></span> Correct answer, well done.]]></text>
+    </prtcorrect>
+    <prtpartiallycorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:orange;"><i class="fa fa-adjust"></i></span> Your answer is partially correct.]]></text>
+    </prtpartiallycorrect>
+    <prtincorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:red;"><i class="fa fa-times"></i></span> Incorrect answer.]]></text>
+    </prtincorrect>
+    <multiplicationsign>none</multiplicationsign>
+    <sqrtsign>1</sqrtsign>
+    <complexno>i</complexno>
+    <inversetrig>cos-1</inversetrig>
+    <matrixparens>[</matrixparens>
+    <variantsselectionseed></variantsselectionseed>
+    <input>
+      <name>ans1</name>
+      <type>algebraic</type>
+      <tans>1</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans2</name>
+      <type>algebraic</type>
+      <tans>3</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans3</name>
+      <type>algebraic</type>
+      <tans>d/q</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans4</name>
+      <type>checkbox</type>
+      <tans>partd</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>0</mustverify>
+      <showvalidation>0</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans5</name>
+      <type>algebraic</type>
+      <tans>4</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options></options>
+    </input>
+    <prt>
+      <name>prt1</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackvariables>
+        <text></text>
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans1</sans>
+        <tans>1</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>1</truenextnode>
+        <trueanswernote>prt1-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text></text>
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>1</falsenextnode>
+        <falseanswernote>prt1-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text></text>
+        </falsefeedback>
+      </node>
+      <node>
+        <name>1</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans2</sans>
+        <tans>3</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>+</truescoremode>
+        <truescore>0.0000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt1-2-T</trueanswernote>
+        <truefeedback format="html">
+          <text></text>
+        </truefeedback>
+        <falsescoremode>-</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt1-2-F</falseanswernote>
+        <falsefeedback format="html">
+          <text></text>
+        </falsefeedback>
+      </node>
+    </prt>
+    <deployedseed>807056309</deployedseed>
+    <deployedseed>25392120</deployedseed>
+    <deployedseed>763625690</deployedseed>
+    <deployedseed>1144822237</deployedseed>
+    <deployedseed>249245851</deployedseed>
+    <deployedseed>382773495</deployedseed>
+    <deployedseed>93590109</deployedseed>
+    <deployedseed>1417697226</deployedseed>
+    <deployedseed>226526408</deployedseed>
+    <deployedseed>687221637</deployedseed>
+    <deployedseed>1723670910</deployedseed>
+    <deployedseed>169405722</deployedseed>
+    <deployedseed>1076936978</deployedseed>
+    <deployedseed>410143974</deployedseed>
+    <deployedseed>1127572038</deployedseed>
+    <deployedseed>1357969185</deployedseed>
+    <deployedseed>632669413</deployedseed>
+    <deployedseed>524431928</deployedseed>
+    <deployedseed>387874652</deployedseed>
+    <deployedseed>1635410173</deployedseed>
+    <deployedseed>1973057461</deployedseed>
+    <deployedseed>162689331</deployedseed>
+    <deployedseed>2037280845</deployedseed>
+    <deployedseed>68468648</deployedseed>
+    <deployedseed>623652740</deployedseed>
+    <deployedseed>256374027</deployedseed>
+    <deployedseed>54202367</deployedseed>
+    <deployedseed>199595779</deployedseed>
+    <deployedseed>487269074</deployedseed>
+    <deployedseed>583343814</deployedseed>
+    <deployedseed>712335163</deployedseed>
+    <deployedseed>1244361826</deployedseed>
+    <deployedseed>49408308</deployedseed>
+    <deployedseed>1921430184</deployedseed>
+    <deployedseed>1007839205</deployedseed>
+    <deployedseed>1500304901</deployedseed>
+    <deployedseed>1628263627</deployedseed>
+    <deployedseed>519053273</deployedseed>
+    <deployedseed>1120397865</deployedseed>
+    <deployedseed>551553396</deployedseed>
+    <qtest>
+      <testcase>1</testcase>
+      <testinput>
+        <name>ans1</name>
+        <value>1</value>
+      </testinput>
+      <testinput>
+        <name>ans2</name>
+        <value>3</value>
+      </testinput>
+      <testinput>
+        <name>ans3</name>
+        <value>d/q</value>
+      </testinput>
+      <testinput>
+        <name>ans4</name>
+        <value>partd</value>
+      </testinput>
+      <testinput>
+        <name>ans5</name>
+        <value>4</value>
+      </testinput>
+      <expected>
+        <name>prt1</name>
+        <expectedscore>1.0000000</expectedscore>
+        <expectedpenalty>0.0000000</expectedpenalty>
+        <expectedanswernote>prt1-2-T</expectedanswernote>
+      </expected>
+    </qtest>
+  </question>
+
+<!-- question: 9086  -->
+  <question type="stack">
+    <name>
+      <text>Hamming Distance/Nearest Neighbour</text>
+    </name>
+    <questiontext format="moodle_auto_format">
+      <text><![CDATA[<p> Given an alphabet \(A=\{0,1,2\} \) and words \(x={@a@}{@b@}{@c@}{@d@}{@e@}\), \(y={@c@}{@d@}{@e@}{@b@}{@a@}\)</p>
+<p> i) Calculate the Hamming distance \(d(x,y)\) between \(x\) and \(y\). <br>
+[[input:ans1]] [[validation:ans1]]</p>
+<p> One of \({@a@}{@b@}{@c@}{@d@}{@e@}\) or \({@c@}{@d@}{@e@}{@b@}{@a@}\) is sent, however the word received is \(z={@c@}{@a@}{@b@}{@d@}{@e@}\). </p>
+
+<p> ii) Using the nearest neighbour rule, which word do we assume was originally sent? <br>  [[input:ans2]] [[validation:ans2]]</p>
+
+<p> <br> iii) If \({@x@}\) is sent, with an error probability \(p={@p@}\), what is the probability that it is received? Give your answer to three decimal places. <br>
+[[input:ans3]] [[validation:ans3]] </p>
+
+<p> iv) What is the probability that either \({@x@}\) <b> or </b> \({@y@}\) are received? Give your answer to three decimal places. <br> [[input:ans4]] [[validation:ans4]] </p>]]></text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <stackversion>
+      <text>2018080600</text>
+    </stackversion>
+    <questionvariables>
+      <text><![CDATA[a: rand([0,1,2]);
+b: rand([0,1,2]);
+c: rand([0,1,2]);
+d: rand([0,1,2]);
+e: rand([0,1,2]);
+
+x: [a,b,c,d,e];
+y: [c,d,e,b,a];
+z: [c,a,b,d,e]
+
+dist(x,y) :=block(dist:0, if x[1]=y[1] then dist: dist+1 , if x[2]=y[2] then dist: dist+1, if x[3]=y[3] then dist: dist+1, if x[4]=y[4] then dist: dist+1, if x[5]=y[5] then dist: dist+1, return(dist)) ;
+distance: 5-dist(x,y)
+
+distx:5-dist(x,z)
+disty:5-dist(y,z)
+
+xyz(x,y,z):=block(if distx>disty then return("y"), if disty>distx then return("x"), if distx=disty then return("Request Retransmission"))
+
+nearestneighbour:xyz(x,y,z)
+partb: [["x", (block(if nearestneighbour="x" then return(true) else return(false)))],  ["y", (block(if nearestneighbour="y" then return(true) else return(false)))], ["Request Retransmission", (block(if nearestneighbour="Request Retransmission" then return(true) else return(false)))]];
+
+p:rand([0.01,0.02,0.03,0.04])
+partiii: decimalplaces((1-p)^5,3)
+wrongpartiii: (1-p)^5
+pxory: decimalplaces(((1-p)^distance)+((p/2)^dist(x,y)),3)
+]]></text>
+    </questionvariables>
+    <specificfeedback format="html">
+      <text><![CDATA[[[feedback:prt1]]
+<hr>
+[[feedback:prt2]]
+<hr>
+[[feedback:prt3]]
+<hr>
+[[feedback:prt4]]]]></text>
+    </specificfeedback>
+    <questionnote>
+      <text>x={@x@} and y={@y@} and distance={@dist@}. NN={@nearestneighbour@}, iv) = {@pxory@}</text>
+    </questionnote>
+    <questionsimplify>1</questionsimplify>
+    <assumepositive>0</assumepositive>
+    <assumereal>0</assumereal>
+    <prtcorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:green;"><i class="fa fa-check"></i></span> Correct answer, well done.]]></text>
+    </prtcorrect>
+    <prtpartiallycorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:orange;"><i class="fa fa-adjust"></i></span> Your answer is partially correct.]]></text>
+    </prtpartiallycorrect>
+    <prtincorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:red;"><i class="fa fa-times"></i></span> Incorrect answer.]]></text>
+    </prtincorrect>
+    <multiplicationsign>none</multiplicationsign>
+    <sqrtsign>1</sqrtsign>
+    <complexno>i</complexno>
+    <inversetrig>cos-1</inversetrig>
+    <matrixparens>[</matrixparens>
+    <variantsselectionseed></variantsselectionseed>
+    <input>
+      <name>ans1</name>
+      <type>algebraic</type>
+      <tans>distance</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans2</name>
+      <type>dropdown</type>
+      <tans>partb</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>0</mustverify>
+      <showvalidation>0</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans3</name>
+      <type>algebraic</type>
+      <tans>partiii</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>0</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans4</name>
+      <type>algebraic</type>
+      <tans>pxory</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>0</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options></options>
+    </input>
+    <prt>
+      <name>prt1</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackvariables>
+        <text></text>
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans1</sans>
+        <tans>distance</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt1-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text>Your answer for i) is correct.</text>
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>1</falsenextnode>
+        <falseanswernote>prt1-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text><![CDATA[<p> Your answer for i) is incorrect. <br>
+To calculate the Hamming distance \(d(x,y)\) between two words \(x\) and \(y\) we find the number of places at which \(x\) and \(y\) <b> differ. </b> </p>]]></text>
+        </falsefeedback>
+      </node>
+      <node>
+        <name>1</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans1</sans>
+        <tans>dist(x,y)</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>+</truescoremode>
+        <truescore>0.0000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt1-2-T</trueanswernote>
+        <truefeedback format="html">
+          <text><![CDATA[<p> Your answer gives the number of places at which \(x\) and \(y\) are the same. </p>]]></text>
+        </truefeedback>
+        <falsescoremode>-</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt1-2-F</falseanswernote>
+        <falsefeedback format="html">
+          <text></text>
+        </falsefeedback>
+      </node>
+    </prt>
+    <prt>
+      <name>prt2</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackvariables>
+        <text></text>
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>String</answertest>
+        <sans>ans2</sans>
+        <tans>nearestneighbour</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt2-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text>Your answer for ii) is correct.</text>
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt2-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text><![CDATA[<p> Your answer for ii) is incorrect. <br>
+To calculate which word may have been sent, we can find both \(d(x,z)\) and \(d(y,z)\):
+\begin{itemize}
+  \item If \(d(x,z) = d(y,z)\) then we require a retransmission.
+  \item If \(d(x,z) < d(y,z)\) then we assume \(x\) was sent.
+  \item If \(d(x,z) > d(y,z)\) then we assume \(y\) was sent.
+\end{itemize} </p>]]></text>
+        </falsefeedback>
+      </node>
+    </prt>
+    <prt>
+      <name>prt3</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackvariables>
+        <text></text>
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>NumDecPlaces</answertest>
+        <sans>ans3</sans>
+        <tans>partiii</tans>
+        <testoptions>3</testoptions>
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>0.0000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>1</truenextnode>
+        <trueanswernote>prt3-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text></text>
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>1</falsenextnode>
+        <falseanswernote>prt3-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text>Your answer for iii) is not to 3 decimal places.</text>
+        </falsefeedback>
+      </node>
+      <node>
+        <name>1</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans3</sans>
+        <tans>partiii</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>+</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt3-2-T</trueanswernote>
+        <truefeedback format="html">
+          <text>Your answer for iii) is correct.</text>
+        </truefeedback>
+        <falsescoremode>-</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt3-2-F</falseanswernote>
+        <falsefeedback format="html">
+          <text><![CDATA[<br> If \({@x@}\) is sent, then the probability  that it is received as \({@x@}\) is \((1 − p)^2\).]]></text>
+        </falsefeedback>
+      </node>
+    </prt>
+    <prt>
+      <name>prt4</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackvariables>
+        <text></text>
+      </feedbackvariables>
+      <node>
+        <name>1</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans4</sans>
+        <tans>pxory</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>+</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt4-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text>Your answer for iv) is correct.</text>
+        </truefeedback>
+        <falsescoremode>-</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt4-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text>Your answer for iv) is incorrect.</text>
+        </falsefeedback>
+      </node>
+    </prt>
+    <deployedseed>572985467</deployedseed>
+    <deployedseed>612331527</deployedseed>
+    <deployedseed>803856242</deployedseed>
+    <deployedseed>1748646286</deployedseed>
+    <deployedseed>810115408</deployedseed>
+    <deployedseed>630030135</deployedseed>
+    <deployedseed>1639160075</deployedseed>
+    <deployedseed>1152921474</deployedseed>
+    <deployedseed>1202861923</deployedseed>
+    <deployedseed>240833845</deployedseed>
+    <deployedseed>412919796</deployedseed>
+    <deployedseed>1811822922</deployedseed>
+    <deployedseed>2146725679</deployedseed>
+    <deployedseed>529087739</deployedseed>
+    <deployedseed>1994717511</deployedseed>
+    <deployedseed>198854551</deployedseed>
+    <deployedseed>1461124200</deployedseed>
+    <deployedseed>532277421</deployedseed>
+    <deployedseed>1630126427</deployedseed>
+    <deployedseed>2146202042</deployedseed>
+    <deployedseed>1687638450</deployedseed>
+    <deployedseed>76659496</deployedseed>
+    <deployedseed>1634870096</deployedseed>
+    <deployedseed>1185867852</deployedseed>
+    <deployedseed>2000463271</deployedseed>
+    <deployedseed>36662066</deployedseed>
+    <deployedseed>507177245</deployedseed>
+    <deployedseed>468597246</deployedseed>
+    <deployedseed>1490178282</deployedseed>
+    <deployedseed>1399335346</deployedseed>
+    <deployedseed>1682733424</deployedseed>
+    <deployedseed>1372578843</deployedseed>
+    <deployedseed>369986527</deployedseed>
+    <deployedseed>92662022</deployedseed>
+    <deployedseed>994895575</deployedseed>
+    <deployedseed>1339056527</deployedseed>
+    <deployedseed>880432621</deployedseed>
+    <deployedseed>912353260</deployedseed>
+    <deployedseed>983462821</deployedseed>
+    <deployedseed>1493431217</deployedseed>
+    <deployedseed>877340130</deployedseed>
+    <deployedseed>2025392126</deployedseed>
+    <deployedseed>1866103278</deployedseed>
+    <deployedseed>82027762</deployedseed>
+    <deployedseed>838003917</deployedseed>
+    <deployedseed>312375266</deployedseed>
+    <deployedseed>1875947177</deployedseed>
+    <deployedseed>303044401</deployedseed>
+    <deployedseed>1951124855</deployedseed>
+    <deployedseed>642047237</deployedseed>
+    <qtest>
+      <testcase>1</testcase>
+      <testinput>
+        <name>ans1</name>
+        <value>distance</value>
+      </testinput>
+      <testinput>
+        <name>ans2</name>
+        <value>nearestneighbour</value>
+      </testinput>
+      <testinput>
+        <name>ans3</name>
+        <value>partiii</value>
+      </testinput>
+      <testinput>
+        <name>ans4</name>
+        <value>pxory</value>
+      </testinput>
+      <expected>
+        <name>prt1</name>
+        <expectedscore>1.0000000</expectedscore>
+        <expectedpenalty>0.0000000</expectedpenalty>
+        <expectedanswernote>prt1-1-T</expectedanswernote>
+      </expected>
+      <expected>
+        <name>prt2</name>
+        <expectedscore>1.0000000</expectedscore>
+        <expectedpenalty>0.0000000</expectedpenalty>
+        <expectedanswernote>prt2-1-T</expectedanswernote>
+      </expected>
+      <expected>
+        <name>prt3</name>
+        <expectedscore>1.0000000</expectedscore>
+        <expectedpenalty>0.0000000</expectedpenalty>
+        <expectedanswernote>prt3-2-T</expectedanswernote>
+      </expected>
+      <expected>
+        <name>prt4</name>
+        <expectedscore>1.0000000</expectedscore>
+        <expectedpenalty>0.0000000</expectedpenalty>
+        <expectedanswernote>prt4-1-T</expectedanswernote>
+      </expected>
+    </qtest>
+    <qtest>
+      <testcase>2</testcase>
+      <testinput>
+        <name>ans1</name>
+        <value>distance-2</value>
+      </testinput>
+      <testinput>
+        <name>ans2</name>
+        <value>nearestneighbour</value>
+      </testinput>
+      <testinput>
+        <name>ans3</name>
+        <value>0.8592</value>
+      </testinput>
+      <testinput>
+        <name>ans4</name>
+        <value></value>
+      </testinput>
+      <expected>
+        <name>prt1</name>
+        <expectedscore>0.0000000</expectedscore>
+        <expectedpenalty>0.0000000</expectedpenalty>
+        <expectedanswernote>prt1-2-F</expectedanswernote>
+      </expected>
+      <expected>
+        <name>prt2</name>
+        <expectedscore>1.0000000</expectedscore>
+        <expectedpenalty>0.0000000</expectedpenalty>
+        <expectedanswernote>prt2-1-T</expectedanswernote>
+      </expected>
+      <expected>
+        <name>prt3</name>
+        <expectedscore>0.0000000</expectedscore>
+        <expectedpenalty>0.0000000</expectedpenalty>
+        <expectedanswernote>prt3-1-F</expectedanswernote>
+      </expected>
+      <expected>
+        <name>prt4</name>
+        <expectedscore></expectedscore>
+        <expectedpenalty></expectedpenalty>
+        <expectedanswernote>NULL</expectedanswernote>
+      </expected>
+    </qtest>
+    <qtest>
+      <testcase>3</testcase>
+      <testinput>
+        <name>ans1</name>
+        <value>dist(x,y)</value>
+      </testinput>
+      <testinput>
+        <name>ans2</name>
+        <value>nearestneighbour</value>
+      </testinput>
+      <testinput>
+        <name>ans3</name>
+        <value>wrongpartiii</value>
+      </testinput>
+      <testinput>
+        <name>ans4</name>
+        <value>pxory</value>
+      </testinput>
+      <expected>
+        <name>prt1</name>
+        <expectedscore>0.0000000</expectedscore>
+        <expectedpenalty>0.0000000</expectedpenalty>
+        <expectedanswernote>prt1-2-T</expectedanswernote>
+      </expected>
+      <expected>
+        <name>prt2</name>
+        <expectedscore>1.0000000</expectedscore>
+        <expectedpenalty>0.0000000</expectedpenalty>
+        <expectedanswernote>prt2-1-T</expectedanswernote>
+      </expected>
+      <expected>
+        <name>prt3</name>
+        <expectedscore>0.0000000</expectedscore>
+        <expectedpenalty>0.0000000</expectedpenalty>
+        <expectedanswernote>prt3-1-F</expectedanswernote>
+      </expected>
+      <expected>
+        <name>prt4</name>
+        <expectedscore>1.0000000</expectedscore>
+        <expectedpenalty>0.0000000</expectedpenalty>
+        <expectedanswernote>prt4-1-T</expectedanswernote>
+      </expected>
+    </qtest>
+    <hint format="html">
+      <text>If \({@x@}\) is sent, then the probability  that it is received as \({@x@}\) is \((1 − p)^2\).</text>
+    </hint>
+  </question>
+
+<!-- question: 6997  -->
+  <question type="stack">
+    <name>
+      <text>LA Assignment 1 Q1</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p></p><p>Give the unit vector in \(\mathbb{R}^4\) which is orthogonal to&nbsp;</p><p><span style="font-size: 0.9375rem;">\(\textbf{u}={@U@}\) and \(\textbf{v}={@V@}\) and which make an angle of \(\pi /4\) with \({@W@}\).</span></p><p>[[input:ans1]] [[validation:ans1]]</p><br><br><p></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <stackversion>
+      <text>2018080600</text>
+    </stackversion>
+    <questionvariables>
+      <text>U: matrix([1], [1], [1], [1])
+V: matrix([1], [-1] , [1], [-1])
+W: matrix([1], [0] , [0], [0])
+
+answer: matrix([1/sqrt(2)], [0] , [-1/sqrt(2)], [0])</text>
+    </questionvariables>
+    <specificfeedback format="html">
+      <text><![CDATA[[[feedback:prt1]]<br><br>]]></text>
+    </specificfeedback>
+    <questionnote>
+      <text></text>
+    </questionnote>
+    <questionsimplify>1</questionsimplify>
+    <assumepositive>0</assumepositive>
+    <assumereal>0</assumereal>
+    <prtcorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:green;"><i class="fa fa-check"></i></span> Correct answer, well done.]]></text>
+    </prtcorrect>
+    <prtpartiallycorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:orange;"><i class="fa fa-adjust"></i></span> Your answer is partially correct.]]></text>
+    </prtpartiallycorrect>
+    <prtincorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:red;"><i class="fa fa-times"></i></span> Incorrect answer.]]></text>
+    </prtincorrect>
+    <multiplicationsign>none</multiplicationsign>
+    <sqrtsign>1</sqrtsign>
+    <complexno>i</complexno>
+    <inversetrig>cos-1</inversetrig>
+    <matrixparens>(</matrixparens>
+    <variantsselectionseed></variantsselectionseed>
+    <input>
+      <name>ans1</name>
+      <type>matrix</type>
+      <tans>answer</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options></options>
+    </input>
+    <prt>
+      <name>prt1</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackvariables>
+        <text></text>
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans1</sans>
+        <tans>answer</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt1-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text></text>
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt1-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text></text>
+        </falsefeedback>
+      </node>
+    </prt>
+  </question>
+
+<!-- question: 7527  -->
+  <question type="stack">
+    <name>
+      <text>LA Numbas Assignment 1 Q2</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Calculate \({@U@} \times {@V@}\) </p><br>
+<p>[[input:ans1]] [[validation:ans1]]</p>
+<br>
+<p>Find an equation for the plane, in the form, \(ax+by+cz=d\) that contains the line 
+\( \ell : {@xnum@} = {@ynum@} = {@znum@} \) and the point \(\textbf{a} = {@W@}.\)
+</p>
+
+<p>[[input:ans2]] [[validation:ans2]] </p>]]></text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format">
+      <text><![CDATA[<p> To calculate the cross product of two vectors we use the formula</p>
+<p> \(\pmatrix{x_1 \\ x_2 \\ x_3} \times \pmatrix{y_1 \\ y_2 \\ y_3} = \pmatrix{x_2y_3-x_3y_2 \\ x_3y_1-x_1y_3 \\ x_1y_2-x_2y_1}. \) </p>
+<br>
+<p> Given a point on a plane and a line through it, we first need to find two directions on the plane. If we have a line defined by an equation of the form <br>
+\( \ell : \frac{x-x_0}{a} = \frac{y-y_0}{b}= \frac{z-z_0}{c} \)
+then we can rewrite this <i>parametrically</i> as <br>
+\(\ell : \pmatrix{ x \\ y \\ z} = \pmatrix{x_0 \\ y_0 \\ z_0} + \lambda \pmatrix{a \\ b \\ c}, \)
+where \(\lambda \in \mathbb{R}.\) Hence we have one direction in the plane, namely
+\(d_1 = \pmatrix{a\\b\\c}.\)
+To find another direction, we note that since the point \(\textbf{a}\) is not on the line, the vector between the point \(\textbf{a}\) and a point on \(\ell\) will be a direction in the plane independent of \(d_1\). <br>
+
+In our case, we can see \(d_1 = {@d1@}\)
+and \(d_2 = {@omat@} - {@W@} = {@d2@}.\)
+
+The cross product of two vectors gives a vector perpendicular to both of them; given that we have two directions \(d_1\) and \(d_2\) on the plane, the cross product \(d_1 \times d_2\) will give a <i> normal </i> to the plane:
+\(n = {@n@}.\) <br>
+
+We can then use the equation of the plane \(\textbf{n} \cdot \textbf{x} = \textbf{n} \cdot \textbf{a}\), where \(x=(x,y,z)\) to find the equation required. </p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <stackversion>
+      <text>2018080600</text>
+    </stackversion>
+    <questionvariables>
+      <text>ordergreat(x,y,z);
+a: rand_with_step(-10, 10, 1) ;
+b: rand_with_step(-10, 10, 1);
+c: rand_with_step(-10, 10, 1);
+d: rand_with_step(-10, 10, 1);
+e: rand_with_step(-10, 10, 1);
+f: rand_with_step(-10, 10, 1);
+
+U: matrix([a], [b], [c]);
+V: matrix([d], [e] , [f]);
+crossp: matrix([(U[2][1]*V[3][1])-(U[3][1]*V[2][1])], [(U[3][1]*V[1][1])-(U[1][1]*V[3][1])], [(U[1][1]*V[2][1])-(U[2][1]*V[1][1])]);
+
+x0: rand_with_step(-9,9,1);
+y0: rand_with_step(-9,9,1);
+z0: rand_with_step(-9,9,1);
+g:(rand_with_prohib(-9,9,[0]));
+h:(rand_with_prohib(-9,9,[0]));
+i:(rand_with_prohib(-9,9,[0]));
+xnum: (x-x0)/g;
+ynum: (y-y0)/h;
+znum: (z-z0)/i;
+
+W: matrix([c],[e],[b]);
+d1: matrix([g],[h],[i]);
+omat: matrix([x0],[y0],[z0])
+d2: omat-W;
+n: matrix([(d1[2][1]*d2[3][1])-(d1[3][1]*d2[2][1])], [(d1[3][1]*d2[1][1])-(d1[1][1]*d2[3][1])], [(d1[1][1]*d2[2][1])-(d1[2][1]*d2[1][1])]);
+na: dotproduct(n,W);
+nx: dotproduct(n,(matrix([x],[y],[z])));
+l: nx=na
+</text>
+    </questionvariables>
+    <specificfeedback format="html">
+      <text>[[feedback:prt1]]
+[[feedback:prt2]]</text>
+    </specificfeedback>
+    <questionnote>
+      <text>{@U@},{@V@},{@crossp@}</text>
+    </questionnote>
+    <questionsimplify>1</questionsimplify>
+    <assumepositive>0</assumepositive>
+    <assumereal>0</assumereal>
+    <prtcorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:green;"><i class="fa fa-check"></i></span> Correct answer, well done.]]></text>
+    </prtcorrect>
+    <prtpartiallycorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:orange;"><i class="fa fa-adjust"></i></span> Your answer is partially correct.]]></text>
+    </prtpartiallycorrect>
+    <prtincorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:red;"><i class="fa fa-times"></i></span> Incorrect answer.]]></text>
+    </prtincorrect>
+    <multiplicationsign>none</multiplicationsign>
+    <sqrtsign>1</sqrtsign>
+    <complexno>i</complexno>
+    <inversetrig>cos-1</inversetrig>
+    <matrixparens>[</matrixparens>
+    <variantsselectionseed></variantsselectionseed>
+    <input>
+      <name>ans1</name>
+      <type>matrix</type>
+      <tans>crossp</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans2</name>
+      <type>algebraic</type>
+      <tans>l</tans>
+      <boxsize>12</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options></options>
+    </input>
+    <prt>
+      <name>prt1</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackvariables>
+        <text>a: is(equal(ans1[1], crossp[1])) or is(equal(ans1[2], crossp[2])) or is(equal(ans1[3], crossp[3]))</text>
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans1</sans>
+        <tans>crossp</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>2</truenextnode>
+        <trueanswernote>prt1-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text></text>
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>1</falsenextnode>
+        <falseanswernote>prt1-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text></text>
+        </falsefeedback>
+      </node>
+      <node>
+        <name>1</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>a</sans>
+        <tans>true</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>+</truescoremode>
+        <truescore>0.2000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>2</truenextnode>
+        <trueanswernote>prt1-2-T</trueanswernote>
+        <truefeedback format="html">
+          <text>Only part of your answer is correct for \({@U@} \times {@V@}\).</text>
+        </truefeedback>
+        <falsescoremode>-</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>2</falsenextnode>
+        <falseanswernote>prt1-2-F</falseanswernote>
+        <falsefeedback format="html">
+          <text></text>
+        </falsefeedback>
+      </node>
+      <node>
+        <name>2</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>1</sans>
+        <tans>1</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>+</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt1-3-T</trueanswernote>
+        <truefeedback format="html">
+          <text></text>
+        </truefeedback>
+        <falsescoremode>-</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>3</falsenextnode>
+        <falseanswernote>prt1-3-F</falseanswernote>
+        <falsefeedback format="html">
+          <text></text>
+        </falsefeedback>
+      </node>
+      <node>
+        <name>3</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>1</sans>
+        <tans>1</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>+</truescoremode>
+        <truescore>0.2000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt1-4-T</trueanswernote>
+        <truefeedback format="html">
+          <text></text>
+        </truefeedback>
+        <falsescoremode>-</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt1-4-F</falseanswernote>
+        <falsefeedback format="html">
+          <text></text>
+        </falsefeedback>
+      </node>
+    </prt>
+    <prt>
+      <name>prt2</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackvariables>
+        <text></text>
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans2</sans>
+        <tans>l</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt2-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text></text>
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt2-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text>Your equation for \(\ell\) is incorrect.</text>
+        </falsefeedback>
+      </node>
+    </prt>
+    <deployedseed>1127267798</deployedseed>
+    <deployedseed>1641093574</deployedseed>
+    <deployedseed>1286363279</deployedseed>
+    <deployedseed>1194857105</deployedseed>
+    <deployedseed>165238986</deployedseed>
+    <deployedseed>884165678</deployedseed>
+    <deployedseed>1871848352</deployedseed>
+    <deployedseed>1438022200</deployedseed>
+    <deployedseed>1886694107</deployedseed>
+    <deployedseed>960919950</deployedseed>
+    <deployedseed>568692107</deployedseed>
+    <deployedseed>2048332882</deployedseed>
+    <deployedseed>13852204</deployedseed>
+    <deployedseed>307054057</deployedseed>
+    <deployedseed>555966782</deployedseed>
+    <deployedseed>1790398412</deployedseed>
+    <deployedseed>547344809</deployedseed>
+    <deployedseed>322944131</deployedseed>
+    <deployedseed>945815962</deployedseed>
+    <deployedseed>1395786617</deployedseed>
+    <deployedseed>485497081</deployedseed>
+    <deployedseed>118145967</deployedseed>
+    <deployedseed>409258145</deployedseed>
+    <deployedseed>94483873</deployedseed>
+    <deployedseed>1204377109</deployedseed>
+    <deployedseed>1636178639</deployedseed>
+    <deployedseed>1183408176</deployedseed>
+    <deployedseed>2103716198</deployedseed>
+    <deployedseed>1376295567</deployedseed>
+    <deployedseed>2021931426</deployedseed>
+    <deployedseed>831361609</deployedseed>
+    <deployedseed>1146035611</deployedseed>
+    <deployedseed>1453378520</deployedseed>
+    <deployedseed>1935030785</deployedseed>
+    <deployedseed>471168157</deployedseed>
+    <deployedseed>484787524</deployedseed>
+    <deployedseed>1172363952</deployedseed>
+    <deployedseed>883267408</deployedseed>
+    <deployedseed>864156932</deployedseed>
+    <deployedseed>2062181998</deployedseed>
+    <deployedseed>1956111594</deployedseed>
+    <deployedseed>343122623</deployedseed>
+    <deployedseed>693392413</deployedseed>
+    <deployedseed>2078555239</deployedseed>
+    <deployedseed>1453395392</deployedseed>
+    <deployedseed>1770962724</deployedseed>
+    <deployedseed>898297960</deployedseed>
+    <deployedseed>1435962642</deployedseed>
+    <deployedseed>72900809</deployedseed>
+    <deployedseed>271392990</deployedseed>
+  </question>
+
+<!-- question: 7536  -->
+  <question type="stack">
+    <name>
+      <text>LA Numbas Assignment 2 Q1</text>
+    </name>
+    <questiontext format="moodle_auto_format">
+      <text><![CDATA[<p>Solve the following sets of linear equations. </p>
+\[ \begin{aligned}  {@feqn1@} &=& {@B[1][1]@} \\ {@feqn2@} &=& {@B[2][1]@} \\ {@feqn3@} &=& {@B[3][1]@} \end{aligned} \]
+
+<p> \(x= \) [[input:ans1]] [[validation:ans1]]</p>
+<p> \(y= \) [[input:ans2]] [[validation:ans2]]</p>
+<p> \(z= \) [[input:ans3]] [[validation:ans3]]</p>]]></text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <stackversion>
+      <text>2018080600</text>
+    </stackversion>
+    <questionvariables>
+      <text>ordergreat(x, y, z) ;
+f: lambda ([i, j], rand_with_prohib(-10,10, [0]));
+A:genmatrix(f,3,3);
+B:transpose(genmatrix(f,1,3));
+
+feqn1: (A[1][1])*x + (A[1][2])*y + (A[1][3])*z
+feqn2: (A[2][1])*x + (A[2][2])*y + (A[2][3])*z
+feqn3: (A[3][1])*x + (A[3][2])*y + (A[3][3])*z
+
+eqn1: (A[1][1])*x + (A[1][2])*y + (A[1][3])*z = (B[1][1])
+eqn2: (A[2][1])*x + (A[2][2])*y + (A[2][3])*z = (B[2][1])
+eqn3: (A[3][1])*x + (A[3][2])*y + (A[3][3])*z = (B[3][1])
+
+X: linsolve([eqn1,eqn2,eqn3] , [x, y, z]);
+Y: (linsolve_by_lu(A,B))[1]
+
+x: Y[1][1];
+y: Y[2][1];
+z: Y[3][1]
+r: rref(addcol(A,B))
+</text>
+    </questionvariables>
+    <specificfeedback format="html">
+      <text>[[feedback:prt1]]</text>
+    </specificfeedback>
+    <questionnote>
+      <text>solutions={@Y@}, rref={@r@}</text>
+    </questionnote>
+    <questionsimplify>1</questionsimplify>
+    <assumepositive>0</assumepositive>
+    <assumereal>0</assumereal>
+    <prtcorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:green;"><i class="fa fa-check"></i></span> Correct answer, well done.]]></text>
+    </prtcorrect>
+    <prtpartiallycorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:orange;"><i class="fa fa-adjust"></i></span> Your answer is partially correct.]]></text>
+    </prtpartiallycorrect>
+    <prtincorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:red;"><i class="fa fa-times"></i></span> Incorrect answer.]]></text>
+    </prtincorrect>
+    <multiplicationsign>none</multiplicationsign>
+    <sqrtsign>1</sqrtsign>
+    <complexno>i</complexno>
+    <inversetrig>cos-1</inversetrig>
+    <matrixparens>[</matrixparens>
+    <variantsselectionseed></variantsselectionseed>
+    <input>
+      <name>ans1</name>
+      <type>algebraic</type>
+      <tans>x</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans2</name>
+      <type>algebraic</type>
+      <tans>y</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans3</name>
+      <type>algebraic</type>
+      <tans>z</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options></options>
+    </input>
+    <prt>
+      <name>prt1</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackvariables>
+        <text>a: is(notequal(ans1, x)) or is(notequal(ans2, y)) or is(notequal(ans3, z));
+augmented: addcol(A,B);
+rref: rref(augmented)
+eqna: (A[1][1])*ans1 + (A[1][2])*ans2 + (A[1][3])*ans3
+eqnb: (A[2][1])*ans1 + (A[2][2])*ans2 + (A[2][3])*ans3
+eqnc: (A[3][1])*ans1 + (A[3][2])*ans2 + (A[3][3])*ans3</text>
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans1</sans>
+        <tans>x</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>0.3300000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>1</truenextnode>
+        <trueanswernote>prt1-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text></text>
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>1</falsenextnode>
+        <falseanswernote>prt1-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text><![CDATA[<p> Your answer for \(x\) is incorrect. </p>]]></text>
+        </falsefeedback>
+      </node>
+      <node>
+        <name>1</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans2</sans>
+        <tans>y</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>+</truescoremode>
+        <truescore>0.3300000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>2</truenextnode>
+        <trueanswernote>prt1-2-T</trueanswernote>
+        <truefeedback format="html">
+          <text></text>
+        </truefeedback>
+        <falsescoremode>-</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>2</falsenextnode>
+        <falseanswernote>prt1-2-F</falseanswernote>
+        <falsefeedback format="html">
+          <text><![CDATA[<p> Your answer for \(y\) is incorrect. </p>]]></text>
+        </falsefeedback>
+      </node>
+      <node>
+        <name>2</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans3</sans>
+        <tans>z</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>+</truescoremode>
+        <truescore>0.3400000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>3</truenextnode>
+        <trueanswernote>prt1-3-T</trueanswernote>
+        <truefeedback format="html">
+          <text></text>
+        </truefeedback>
+        <falsescoremode>-</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>3</falsenextnode>
+        <falseanswernote>prt1-3-F</falseanswernote>
+        <falsefeedback format="html">
+          <text><![CDATA[<p> Your answer for \(z\) is incorrect. </p>]]></text>
+        </falsefeedback>
+      </node>
+      <node>
+        <name>3</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>a</sans>
+        <tans>true</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>+</truescoremode>
+        <truescore>0.0000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt1-4-T</trueanswernote>
+        <truefeedback format="html">
+          <text><![CDATA[<p> We can express the augmented matrix given by the linear equations in row-reduced echelon form. <br>
+The augmented matrix in this case is {@augmented@} </p>
+
+<p> By converting these into RREF, we obtain {@rref@}.  We can then find our values for \(x, y, z\) from this matrix. </p>
+
+<p> Substituting your answer into the original equations, we get: <br>
+\( ({@A[1][1]@}*{@ans1@}) + ({@A[1][2]@}*{@ans2@}) + ({@A[1][3]@}*{@ans3@}) =\) {@(eqna)@}  <br>
+\( ({@A[2][1]@}*{@ans1@}) + ({@A[2][2]@}*{@ans2@}) + ({@A[2][3]@}*{@ans3@}) =\) {@(eqnb)@}  <br>
+\( ({@A[3][1]@}*{@ans1@}) + ({@A[3][2]@}*{@ans2@}) + ({@A[3][3]@}*{@ans3@}) =\) {@(eqnc)@}  </p>
+
+<p> Which are not equal to {@B@}. </p>]]></text>
+        </truefeedback>
+        <falsescoremode>-</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt1-4-F</falseanswernote>
+        <falsefeedback format="html">
+          <text></text>
+        </falsefeedback>
+      </node>
+    </prt>
+    <deployedseed>861249209</deployedseed>
+    <deployedseed>1737736339</deployedseed>
+    <deployedseed>169936541</deployedseed>
+    <deployedseed>996811714</deployedseed>
+    <deployedseed>1952010133</deployedseed>
+    <deployedseed>1692093280</deployedseed>
+    <deployedseed>222500440</deployedseed>
+    <deployedseed>1977744633</deployedseed>
+    <deployedseed>532888120</deployedseed>
+    <deployedseed>1402898474</deployedseed>
+    <deployedseed>1844820528</deployedseed>
+    <deployedseed>1529033686</deployedseed>
+    <deployedseed>1005257710</deployedseed>
+    <deployedseed>1687217352</deployedseed>
+    <deployedseed>1977300668</deployedseed>
+    <deployedseed>954501858</deployedseed>
+    <deployedseed>573468492</deployedseed>
+    <qtest>
+      <testcase>1</testcase>
+      <testinput>
+        <name>ans1</name>
+        <value>x</value>
+      </testinput>
+      <testinput>
+        <name>ans2</name>
+        <value>y</value>
+      </testinput>
+      <testinput>
+        <name>ans3</name>
+        <value>z</value>
+      </testinput>
+      <expected>
+        <name>prt1</name>
+        <expectedscore>1.0000000</expectedscore>
+        <expectedpenalty>0.0000000</expectedpenalty>
+        <expectedanswernote>prt1-4-F</expectedanswernote>
+      </expected>
+    </qtest>
+    <qtest>
+      <testcase>2</testcase>
+      <testinput>
+        <name>ans1</name>
+        <value>y</value>
+      </testinput>
+      <testinput>
+        <name>ans2</name>
+        <value>y</value>
+      </testinput>
+      <testinput>
+        <name>ans3</name>
+        <value>z</value>
+      </testinput>
+      <expected>
+        <name>prt1</name>
+        <expectedscore>0.6700000</expectedscore>
+        <expectedpenalty>0.0000000</expectedpenalty>
+        <expectedanswernote>prt1-4-T</expectedanswernote>
+      </expected>
+    </qtest>
+  </question>
+
+<!-- question: 8727  -->
+  <question type="stack">
+    <name>
+      <text>LA Numbas Assignment 2 Q2</text>
+    </name>
+    <questiontext format="moodle_auto_format">
+      <text><![CDATA[<p> Now consider the following system of equations for various values of \(t \in \mathbb{R} \). <br>
+\[\begin{aligned} x  \quad &+&   &\phantom{+}& ({@partbeqnat@})z &=& {@alpha@} \\ -x \quad  &+& y \quad &+& {@beta@}z &=& {@delta@} \\ &+& ty \quad &+& {@gamma@}z &=& {@epsilon@} \end{aligned}\] <br>
+For what value(s) of \(t\) does the system have
+<b> No </b> solutions?     \(\qquad\qquad\qquad\)     t=[[input:ans1]] [[validation:ans1]]
+<b>Infinitely many</b> solutions?      \(\qquad\)   t=
+{@rowredbotrow@}
+{@solvrrbotrow@}]]></text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format">
+      <text><![CDATA[<p> To determine the solution set of the second set of equations, we put it in augmented matrix form <br>
+{@tmatrix@} </p>
+Then, by row-reducing, the bottom row can be simplified to <br>
+\({@rowredbotrow@}z = {@toprow@}\). <br>
+This leaves us with three possible cases:
+<ul>
+  <li>If {@solvrrbotrow[2]@}, then the bottom line is inconsistent. Therefore there can be no solutions to the set of equations.</li>
+  <li>If {@solvrrbotrow[1]@}, then the bottom line is a row of zeros, and hence there are infinitely many solutions.</li>
+  <li>If \(t\) is not equal to either, we can determine \(z\) uniquely and then \(x\) and \(y\).</li>
+</ul>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <stackversion>
+      <text>2018080600</text>
+    </stackversion>
+    <questionvariables>
+      <text>alpha: rand_with_prohib(-5,5,[0])
+partbeqnat: (rand_with_prohib(-5,5,[0])*t+rand_with_prohib(-5,5,[0]))
+partbeqn1: x + (partbeqnat)*z 
+
+beta: rand_with_prohib(-5,5,[0,1,-1])
+delta: rand_with_prohib(-5,5,[0])
+partbeqn2: -x+(t*y)+(beta*z)
+
+gamma: rand_with_prohib(-5,5,[-1,0,1])
+epsilon: rand_with_prohib(-7,0,[0])
+
+tmatrix: matrix([1,0,partbeqnat, alpha], [-1,1, beta, delta],[0,t,gamma,epsilon])
+
+eftmatrix: echelon(tmatrix)
+zvalue: eftmatrix[3,4]
+
+rowredbotrow: factor(denom(zvalue))
+toprow: factor(num(zvalue))
+solvrrbotrow: solve(rowredbotrow)</text>
+    </questionvariables>
+    <specificfeedback format="html">
+      <text>[[feedback:prt1]]</text>
+    </specificfeedback>
+    <questionnote>
+      <text>rowreducedbottomrow={@rowredbotrow@}</text>
+    </questionnote>
+    <questionsimplify>1</questionsimplify>
+    <assumepositive>0</assumepositive>
+    <assumereal>0</assumereal>
+    <prtcorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:green;"><i class="fa fa-check"></i></span> Correct answer, well done.]]></text>
+    </prtcorrect>
+    <prtpartiallycorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:orange;"><i class="fa fa-adjust"></i></span> Your answer is partially correct.]]></text>
+    </prtpartiallycorrect>
+    <prtincorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:red;"><i class="fa fa-times"></i></span> Incorrect answer.]]></text>
+    </prtincorrect>
+    <multiplicationsign>none</multiplicationsign>
+    <sqrtsign>1</sqrtsign>
+    <complexno>i</complexno>
+    <inversetrig>cos-1</inversetrig>
+    <matrixparens>[</matrixparens>
+    <variantsselectionseed></variantsselectionseed>
+    <input>
+      <name>ans1</name>
+      <type>algebraic</type>
+      <tans>1</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options></options>
+    </input>
+    <prt>
+      <name>prt1</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackvariables>
+        <text></text>
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>1</sans>
+        <tans>1</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt1-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text></text>
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt1-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text></text>
+        </falsefeedback>
+      </node>
+    </prt>
+    <deployedseed>1786887113</deployedseed>
+    <deployedseed>1724006045</deployedseed>
+    <deployedseed>224175312</deployedseed>
+    <deployedseed>1915360490</deployedseed>
+    <deployedseed>1065772429</deployedseed>
+    <deployedseed>1787649466</deployedseed>
+    <deployedseed>1047022135</deployedseed>
+  </question>
+
+<!-- question: 6996  -->
+  <question type="stack">
+    <name>
+      <text>LA Sheet 1 Q1</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p></p><p>Let&nbsp; \(\vec{u} = {@U@}\) and \(\vec{v} = {@V@}\) be in \(\mathbb{R}^4\).</p><p>a) Find the length of both \(\vec{u}\) and \(\vec{v}\).</p><p>\(|\vec{u}|\) = [[input:ans1]] [[validation:ans1]]</p><p></p><p>\(|\vec{v}|\) = [[input:ans2]] [[validation:ans2]]</p><p></p><p></p>b) Using your answers, find the angle \(\theta \in [0 , \pi]\) between \(\vec{u}\) and \(\vec{v}\).<br><p>\(\cos(\theta)\) = [[input:ans3]] [[validation:ans3]]</p><br><br><p></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <stackversion>
+      <text>2018080600</text>
+    </stackversion>
+    <questionvariables>
+      <text>U: matrix([1], [1], [1], [1])
+V: matrix([-1], [2] , [-1], [2])
+
+modU: sqrt(dotproduct(U,U))
+modV: sqrt(dotproduct(V,V))
+
+dottyp: dotproduct(U, V)
+theta: dottyp/(modU*modV)
+</text>
+    </questionvariables>
+    <specificfeedback format="html">
+      <text><![CDATA[[[feedback:prt1]]<br>[[feedback:prt2]]<br>[[feedback:prt3]]<br><br><br>]]></text>
+    </specificfeedback>
+    <questionnote>
+      <text></text>
+    </questionnote>
+    <questionsimplify>1</questionsimplify>
+    <assumepositive>0</assumepositive>
+    <assumereal>0</assumereal>
+    <prtcorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:green;"><i class="fa fa-check"></i></span> Correct answer, well done.]]></text>
+    </prtcorrect>
+    <prtpartiallycorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:orange;"><i class="fa fa-adjust"></i></span> Your answer is partially correct.]]></text>
+    </prtpartiallycorrect>
+    <prtincorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:red;"><i class="fa fa-times"></i></span> Incorrect answer.]]></text>
+    </prtincorrect>
+    <multiplicationsign>none</multiplicationsign>
+    <sqrtsign>1</sqrtsign>
+    <complexno>i</complexno>
+    <inversetrig>arccos</inversetrig>
+    <matrixparens>(</matrixparens>
+    <variantsselectionseed></variantsselectionseed>
+    <input>
+      <name>ans1</name>
+      <type>algebraic</type>
+      <tans>modU</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords>dotproduct</forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>0</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans2</name>
+      <type>algebraic</type>
+      <tans>modV</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords>dotproduct</forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>0</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans3</name>
+      <type>algebraic</type>
+      <tans>theta</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords>dotproduct</forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>0</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options></options>
+    </input>
+    <prt>
+      <name>prt1</name>
+      <value>0.3300000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackvariables>
+        <text></text>
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans1</sans>
+        <tans>modU</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt1-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text><![CDATA[<p dir="ltr" style="text-align: left;">Your answer for \(|\vec{u}|\) is correct.</p>]]></text>
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt1-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text><![CDATA[Recall to calculate the length of a vector \(\textbf{v}\),&nbsp; \(|\textbf{v}|\ = \sqrt{\textbf{v}\cdot\textbf{v}} \).]]></text>
+        </falsefeedback>
+      </node>
+    </prt>
+    <prt>
+      <name>prt2</name>
+      <value>0.3300000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackvariables>
+        <text></text>
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans2</sans>
+        <tans>modV</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt2-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text><![CDATA[<p dir="ltr" style="text-align: left;">Your answer for \(|\vec{v}|\) is correct.<br></p>]]></text>
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt2-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text><![CDATA[<p dir="ltr" style="text-align: left;">Recall to calculate the length of a vector \(\textbf{v}\),&nbsp; \(|\textbf{v}|\ = \sqrt{\textbf{v}\cdot\textbf{v}} \).<br></p>]]></text>
+        </falsefeedback>
+      </node>
+    </prt>
+    <prt>
+      <name>prt3</name>
+      <value>0.3300000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackvariables>
+        <text></text>
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans3</sans>
+        <tans>theta</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt3-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text><![CDATA[<p dir="ltr" style="text-align: left;">Your answer for&nbsp;\(\arccos (\theta)\) is correct.<br></p>]]></text>
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt3-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text><![CDATA[<p dir="ltr" style="text-align: left;">Recall from the lectures for two vectors&nbsp;\(\textbf{u}\) and&nbsp;\(\textbf{v}\), \(\cos(\theta)=\frac{\textbf{u} \cdot \textbf{v}}{\textbf{|u|}\textbf{|v|}} \).</p><p dir="ltr" style="text-align: left;"><br></p><p dir="ltr" style="text-align: left;"><br></p><p dir="ltr" style="text-align: left;"><br></p>]]></text>
+        </falsefeedback>
+      </node>
+    </prt>
+  </question>
+
+<!-- question: 6998  -->
+  <question type="stack">
+    <name>
+      <text>LA Sheet 1 Q1 (With Random Vectors)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Let&nbsp; \(\vec{u} = {@U@}\) and \(\vec{v} = {@V@}\) be in \(\mathbb{R}^4\).</p>
+
+<p>Find the length of both \(\vec{u}\) and \(\vec{v}\).</p>
+
+<p>\(|\vec{u}|\) = [[input:ans1]] [[validation:ans1]]</p>
+
+<p></p>
+<p>\(|\vec{v}|\) = [[input:ans2]] [[validation:ans2]]</p>Using your answers, find the angle \(\cos{\theta} \in [0 , \pi]\) between \(\vec{u}\) and \(\vec{v}\).&nbsp; <br><p>\(\cos{\theta}\) = [[input:ans3]] [[validation:ans3]]</p><br><br><p></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <stackversion>
+      <text>2018080600</text>
+    </stackversion>
+    <questionvariables>
+      <text>a: rand_with_step(-10, 10, 1)
+b: rand_with_step(-10, 10, 1)
+c: rand_with_step(-10, 10, 1)
+d: rand_with_step(-10, 10, 1)
+e: rand_with_step(-10, 10, 1)
+f: rand_with_step(-10, 10, 1)
+
+U: matrix([a], [b], [c], [d])
+V: matrix([e], [f] , [c], [a])
+
+modU: sqrt(dotproduct(U,U))
+modV: sqrt(dotproduct(V,V))
+
+dottyp: dotproduct(U, V)
+costheta: dottyp/(modU*modV)
+theta: acos(arccostheta)
+</text>
+    </questionvariables>
+    <specificfeedback format="html">
+      <text><![CDATA[[[feedback:prt1]]<br>[[feedback:prt3]]<br><br><br>]]></text>
+    </specificfeedback>
+    <questionnote>
+      <text>{@U@},{@modU@}</text>
+    </questionnote>
+    <questionsimplify>1</questionsimplify>
+    <assumepositive>0</assumepositive>
+    <assumereal>0</assumereal>
+    <prtcorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:green;"><i class="fa fa-check"></i></span> Correct answer, well done.]]></text>
+    </prtcorrect>
+    <prtpartiallycorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:orange;"><i class="fa fa-adjust"></i></span> Your answer is partially correct.]]></text>
+    </prtpartiallycorrect>
+    <prtincorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:red;"><i class="fa fa-times"></i></span> Incorrect answer.]]></text>
+    </prtincorrect>
+    <multiplicationsign>none</multiplicationsign>
+    <sqrtsign>1</sqrtsign>
+    <complexno>i</complexno>
+    <inversetrig>arccos</inversetrig>
+    <matrixparens>(</matrixparens>
+    <variantsselectionseed></variantsselectionseed>
+    <input>
+      <name>ans1</name>
+      <type>algebraic</type>
+      <tans>modU</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords>dotproduct</forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>0</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>2</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans2</name>
+      <type>algebraic</type>
+      <tans>modV</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords>dotproduct</forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>0</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>2</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans3</name>
+      <type>algebraic</type>
+      <tans>costheta</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords>dotproduct</forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>0</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>2</showvalidation>
+      <options></options>
+    </input>
+    <prt>
+      <name>prt1</name>
+      <value>0.6600000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackvariables>
+        <text></text>
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans1</sans>
+        <tans>modU</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>0.5000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>1</truenextnode>
+        <trueanswernote>prt1-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text><![CDATA[<p dir="ltr" style="text-align: left;">Your answer for \(|\vec{u}|\) is correct.</p>]]></text>
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>2</falsenextnode>
+        <falseanswernote>prt1-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text><![CDATA[Your answer to \(|\vec{u}|\) is incorrect.<br><br>]]></text>
+        </falsefeedback>
+      </node>
+      <node>
+        <name>1</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans2</sans>
+        <tans>modV</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>+</truescoremode>
+        <truescore>0.5000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt1-2-T</trueanswernote>
+        <truefeedback format="html">
+          <text><![CDATA[<p dir="ltr" style="text-align: left;">Your answer for \(|\vec{v}|\) is correct.<br></p>]]></text>
+        </truefeedback>
+        <falsescoremode>-</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>4</falsenextnode>
+        <falseanswernote>prt1-2-F</falseanswernote>
+        <falsefeedback format="html">
+          <text><![CDATA[<p dir="ltr" style="text-align: left;">Your answer to \(|\vec{v}|\) is incorrect.<br>Recall to calculate the length of a vector \(\textbf{v}\),&nbsp; \(|\textbf{v}|\ = \sqrt{\textbf{v}\cdot\textbf{v}} \).<br></p>]]></text>
+        </falsefeedback>
+      </node>
+      <node>
+        <name>2</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans1</sans>
+        <tans>(modU)^2</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>+</truescoremode>
+        <truescore>0.2000000</truescore>
+        <truepenalty>0.0000000</truepenalty>
+        <truenextnode>1</truenextnode>
+        <trueanswernote>prt1-3-T</trueanswernote>
+        <truefeedback format="html">
+          <text><![CDATA[<p dir="ltr" style="text-align: left;">Remember to calculate the length of a vector \(\vec{u}\) you must calculate the \(\textbf{square root}\) of the dot product.</p>]]></text>
+        </truefeedback>
+        <falsescoremode>-</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>3</falsenextnode>
+        <falseanswernote>prt1-3-F</falseanswernote>
+        <falsefeedback format="html">
+          <text></text>
+        </falsefeedback>
+      </node>
+      <node>
+        <name>3</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans1</sans>
+        <tans>-modU</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>+</truescoremode>
+        <truescore>0.2000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>1</truenextnode>
+        <trueanswernote>prt1-4-T</trueanswernote>
+        <truefeedback format="html">
+          <text><![CDATA[<p dir="ltr" style="text-align: left;">Remember the length of a vector \(\vec{u}\) must be positive.</p>]]></text>
+        </truefeedback>
+        <falsescoremode>-</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>1</falsenextnode>
+        <falseanswernote>prt1-4-F</falseanswernote>
+        <falsefeedback format="html">
+          <text><![CDATA[<p dir="ltr" style="text-align: left;">Recall to calculate the length of a vector \(\textbf{v}\),&nbsp; \(|\textbf{v}|\ = \sqrt{\textbf{v}\cdot\textbf{v}} \).<br></p>]]></text>
+        </falsefeedback>
+      </node>
+      <node>
+        <name>4</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans2</sans>
+        <tans>(modV)^2</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>+</truescoremode>
+        <truescore>0.2000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt1-5-T</trueanswernote>
+        <truefeedback format="html">
+          <text></text>
+        </truefeedback>
+        <falsescoremode>-</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>5</falsenextnode>
+        <falseanswernote>prt1-5-F</falseanswernote>
+        <falsefeedback format="html">
+          <text></text>
+        </falsefeedback>
+      </node>
+      <node>
+        <name>5</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans2</sans>
+        <tans>-(modV)</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>+</truescoremode>
+        <truescore>0.2000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt1-6-T</trueanswernote>
+        <truefeedback format="html">
+          <text></text>
+        </truefeedback>
+        <falsescoremode>-</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt1-6-F</falseanswernote>
+        <falsefeedback format="html">
+          <text></text>
+        </falsefeedback>
+      </node>
+    </prt>
+    <prt>
+      <name>prt3</name>
+      <value>0.3300000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackvariables>
+        <text><![CDATA[inrange: is(acos(ans3)>0) and is(acos(ans3)<%pi);]]></text>
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans3</sans>
+        <tans>costheta</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt3-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text><![CDATA[<p dir="ltr" style="text-align: left;">Your answer for&nbsp;\(\arccos (\theta)\) is correct.<br></p>]]></text>
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>1</falsenextnode>
+        <falseanswernote>prt3-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text><![CDATA[<p dir="ltr" style="text-align: left;">Your answer for \(\theta\) is incorrect.
+
+</p><p dir="ltr" style="text-align: left;">Recall from the lectures for two vectors&nbsp;\(\textbf{u}\) and&nbsp;\(\textbf{v}\), \(\cos(\theta)=\frac{\textbf{u} \cdot \textbf{v}}{\textbf{|u|}\textbf{|v|}} \).
+
+</p><p dir="ltr" style="text-align: left;"><br></p><p dir="ltr" style="text-align: left;"><br></p><p dir="ltr" style="text-align: left;"><br></p>]]></text>
+        </falsefeedback>
+      </node>
+      <node>
+        <name>1</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>inrange</sans>
+        <tans>true</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>+</truescoremode>
+        <truescore>0.0000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt3-2-T</trueanswernote>
+        <truefeedback format="html">
+          <text></text>
+        </truefeedback>
+        <falsescoremode>-</falsescoremode>
+        <falsescore>0.5000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt3-2-F</falseanswernote>
+        <falsefeedback format="html">
+          <text>Your answer is not in the range \([0,\pi]\)</text>
+        </falsefeedback>
+      </node>
+    </prt>
+    <deployedseed>2011803215</deployedseed>
+    <deployedseed>2140787754</deployedseed>
+    <deployedseed>58777781</deployedseed>
+    <deployedseed>497897043</deployedseed>
+    <deployedseed>248838674</deployedseed>
+    <deployedseed>69278934</deployedseed>
+    <deployedseed>1615990442</deployedseed>
+    <deployedseed>1523464181</deployedseed>
+    <deployedseed>1765640632</deployedseed>
+    <deployedseed>1016947460</deployedseed>
+  </question>
+
+<!-- question: 7000  -->
+  <question type="stack">
+    <name>
+      <text>LA Sheet 1 Q5</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p></p>Write the following vectors in polar form, i.e. \(r \pmatrix{\cos(\theta) \\ \sin(\theta)}\), where \(r\) is real and \(0 \leq \theta \leq 2\pi \).
+
+<br><br>a) \({@A@}\)<br>[[input:ans1]] [[validation:ans1]][[input:ans2]] [[validation:ans2]]<br>
+
+<br>b) \({@B@}\)<br>[[input:ans3]] [[validation:ans3]][[input:ans4]] [[validation:ans4]]<br>
+
+<br>c) \({@C@}\)<br>[[input:ans5]] [[validation:ans5]][[input:ans6]] [[validation:ans6]]<br><br>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[We can calculate the polar form of a vector \(\textbf{v}\), such as {@A@} by finding: <br>
+\(r = \sqrt{\textbf{v}\cdot\textbf{v}} = \sqrt{{@amod^2@}} = {@amod@} \). <br>
+\(\theta = \arctan({@bot@}/{@top@})\) <br>
+\(\implies \pmatrix{\cos(\theta) \\ \sin(\theta)} = {@amatrix@}\).]]></text>
+    </generalfeedback>
+    <defaultgrade>3.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <stackversion>
+      <text>2018080600</text>
+    </stackversion>
+    <questionvariables>
+      <text>A: matrix([rand_with_prohib(-7,7,[0])], [-(rand_with_prohib(2,5,[3]))*sqrt(3)])
+B: matrix([rand_with_prohib(-5,5,[0])], [-(rand_with_prohib(2,4,[3]))*sqrt(3)])
+C: matrix([rand_with_prohib(-5,5,[0])], [-(rand_with_prohib(2,8,[3]))*sqrt(5)])
+
+top: A[1][1]
+bot: A[2][1]
+
+amod: sqrt(dotproduct(A,A))
+bmod: sqrt(dotproduct(B,B))
+cmod: sqrt(dotproduct(C,C))
+
+atheta: atan(A[2]/A[1])
+amatrix: matrix(cos(atheta) , sin(atheta))
+
+btheta: atan(B[2]/B[1])
+bmatrix: matrix(cos(btheta) , sin(btheta))
+
+
+ctheta: atan(C[2]/C[1])
+cmatrix: matrix(cos(ctheta) , sin(ctheta))</text>
+    </questionvariables>
+    <specificfeedback format="html">
+      <text><![CDATA[[[feedback:prt1]]<br>[[feedback:prt2]]<br>[[feedback:prt3]]<br><br>]]></text>
+    </specificfeedback>
+    <questionnote>
+      <text>{@A@},{@amatrix@},{@bmatrix@},{@cmatrix@}</text>
+    </questionnote>
+    <questionsimplify>1</questionsimplify>
+    <assumepositive>0</assumepositive>
+    <assumereal>0</assumereal>
+    <prtcorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:green;"><i class="fa fa-check"></i></span> Correct answer, well done.]]></text>
+    </prtcorrect>
+    <prtpartiallycorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:orange;"><i class="fa fa-adjust"></i></span> Your answer is partially correct.]]></text>
+    </prtpartiallycorrect>
+    <prtincorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:red;"><i class="fa fa-times"></i></span> Incorrect answer.]]></text>
+    </prtincorrect>
+    <multiplicationsign>none</multiplicationsign>
+    <sqrtsign>1</sqrtsign>
+    <complexno>i</complexno>
+    <inversetrig>cos-1</inversetrig>
+    <matrixparens>(</matrixparens>
+    <variantsselectionseed></variantsselectionseed>
+    <input>
+      <name>ans1</name>
+      <type>algebraic</type>
+      <tans>amod</tans>
+      <boxsize>7</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>0</mustverify>
+      <showvalidation>0</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans2</name>
+      <type>matrix</type>
+      <tans>amatrix</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans3</name>
+      <type>algebraic</type>
+      <tans>bmod</tans>
+      <boxsize>7</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>0</mustverify>
+      <showvalidation>0</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans4</name>
+      <type>matrix</type>
+      <tans>bmatrix</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans5</name>
+      <type>algebraic</type>
+      <tans>cmod</tans>
+      <boxsize>7</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>0</mustverify>
+      <showvalidation>0</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans6</name>
+      <type>matrix</type>
+      <tans>cmatrix</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options></options>
+    </input>
+    <prt>
+      <name>prt1</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackvariables>
+        <text>a: is(equal(ans2[1], amatrix[1])) or is(equal(ans2[2], amatrix[2]))</text>
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans1</sans>
+        <tans>amod</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>0.4000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>1</truenextnode>
+        <trueanswernote>prt1-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text><![CDATA[<p dir="ltr" style="text-align: left;">Your answer for \(r\) for a) is correct.</p>]]></text>
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>1</falsenextnode>
+        <falseanswernote>prt1-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text><![CDATA[<p dir="ltr" style="text-align: left;">Your answer for \(r\) for a) is incorrect.</p><p dir="ltr" style="text-align: left;">To calculate \(r\) of a vector, use the formula \( \sqrt{x^2+y^2}\), for the vector \(\pmatrix{x \\ y}\).</p>]]></text>
+        </falsefeedback>
+      </node>
+      <node>
+        <name>1</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans2</sans>
+        <tans>amatrix</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>+</truescoremode>
+        <truescore>0.6000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt1-2-T</trueanswernote>
+        <truefeedback format="html">
+          <text><![CDATA[<p> Your answer for \(\pmatrix{\cos(\theta) \\ \sin(\theta)}\) in a) is correct.</p>]]></text>
+        </truefeedback>
+        <falsescoremode>-</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>2</falsenextnode>
+        <falseanswernote>prt1-2-F</falseanswernote>
+        <falsefeedback format="html">
+          <text><![CDATA[<p> Your answer for \(\pmatrix{\cos(\theta) \\ \sin(\theta)}\) in a) is incorrect.</p>]]></text>
+        </falsefeedback>
+      </node>
+      <node>
+        <name>2</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>a</sans>
+        <tans>true</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>+</truescoremode>
+        <truescore>0.3300000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt1-3-T</trueanswernote>
+        <truefeedback format="html">
+          <text></text>
+        </truefeedback>
+        <falsescoremode>-</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt1-3-F</falseanswernote>
+        <falsefeedback format="html">
+          <text></text>
+        </falsefeedback>
+      </node>
+    </prt>
+    <prt>
+      <name>prt2</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackvariables>
+        <text>a: is(equal(ans4[1], bmatrix[1])) or is(equal(ans4[2], bmatrix[2]))</text>
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans3</sans>
+        <tans>bmod</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>0.4000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>1</truenextnode>
+        <trueanswernote>prt2-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text><![CDATA[<p dir="ltr" style="text-align: left;">Your answer for \(r\)&nbsp; in b) is correct.</p>]]></text>
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>1</falsenextnode>
+        <falseanswernote>prt2-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text><![CDATA[<p dir="ltr" style="text-align: left;">Your answer for \(r\)&nbsp; in b) is incorrect.<br></p>]]></text>
+        </falsefeedback>
+      </node>
+      <node>
+        <name>1</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans4</sans>
+        <tans>bmatrix</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>+</truescoremode>
+        <truescore>0.6000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt2-2-T</trueanswernote>
+        <truefeedback format="html">
+          <text><![CDATA[<p> Your answer for \(\pmatrix{\cos(\theta) \\ \sin(\theta)}\) in b) is correct</p>]]></text>
+        </truefeedback>
+        <falsescoremode>-</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>2</falsenextnode>
+        <falseanswernote>prt2-2-F</falseanswernote>
+        <falsefeedback format="html">
+          <text><![CDATA[<p> Your answer for \(\pmatrix{\cos(\theta) \\ \sin(\theta)}\) in b) is incorrect</p>]]></text>
+        </falsefeedback>
+      </node>
+      <node>
+        <name>2</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>a</sans>
+        <tans>true</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>+</truescoremode>
+        <truescore>0.3300000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt2-3-T</trueanswernote>
+        <truefeedback format="html">
+          <text></text>
+        </truefeedback>
+        <falsescoremode>-</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt2-3-F</falseanswernote>
+        <falsefeedback format="html">
+          <text></text>
+        </falsefeedback>
+      </node>
+    </prt>
+    <prt>
+      <name>prt3</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackvariables>
+        <text>a: is(equal(ans6[1], cmatrix[1])) or is(equal(ans6[2], cmatrix[2]))</text>
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans5</sans>
+        <tans>cmod</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>0.4000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>1</truenextnode>
+        <trueanswernote>prt3-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text><![CDATA[<p dir="ltr" style="text-align: left;">Your answer for \(r\)&nbsp; in c) is correct.<br></p>]]></text>
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>1</falsenextnode>
+        <falseanswernote>prt3-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text><![CDATA[<p dir="ltr" style="text-align: left;">To calculate \(r\) of a matrix, use the formula \( \sqrt{x^2+y^2}\), for the matrix \(\pmatrix{x \\ y}\).<br></p>]]></text>
+        </falsefeedback>
+      </node>
+      <node>
+        <name>1</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans6</sans>
+        <tans>cmatrix</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>+</truescoremode>
+        <truescore>0.6000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt3-2-T</trueanswernote>
+        <truefeedback format="html">
+          <text><![CDATA[<p> Your answer for \(\pmatrix{\cos(\theta) \\ \sin(\theta)}\) in c) is correct</p>]]></text>
+        </truefeedback>
+        <falsescoremode>-</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>2</falsenextnode>
+        <falseanswernote>prt3-2-F</falseanswernote>
+        <falsefeedback format="html">
+          <text><![CDATA[<p> Your answer for \(\pmatrix{\cos(\theta) \\ \sin(\theta)}\) in c) is incorrect</p>]]></text>
+        </falsefeedback>
+      </node>
+      <node>
+        <name>2</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>a</sans>
+        <tans>true</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>+</truescoremode>
+        <truescore>0.3300000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt3-3-T</trueanswernote>
+        <truefeedback format="html">
+          <text></text>
+        </truefeedback>
+        <falsescoremode>-</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt3-3-F</falseanswernote>
+        <falsefeedback format="html">
+          <text></text>
+        </falsefeedback>
+      </node>
+    </prt>
+    <deployedseed>1172927475</deployedseed>
+    <deployedseed>1930605032</deployedseed>
+    <deployedseed>1018026279</deployedseed>
+    <deployedseed>1434586364</deployedseed>
+    <deployedseed>1518419040</deployedseed>
+    <deployedseed>915206016</deployedseed>
+    <deployedseed>1491795506</deployedseed>
+    <deployedseed>841722012</deployedseed>
+    <deployedseed>44666395</deployedseed>
+    <deployedseed>1738945647</deployedseed>
+    <deployedseed>1341566079</deployedseed>
+  </question>
+
+<!-- question: 10307  -->
+  <question type="stack">
+    <name>
+      <text>Linear Codes</text>
+    </name>
+    <questiontext format="moodle_auto_format">
+      <text><![CDATA[<p>Let \(C = \{({@a@},{@b@},{@c@}), ({@d@},{@e@},{@b@}), ({@c@},{@a@},{@e@}) \} \subseteq F^3_3\).  Is \(C\) a linear code? </p>
+<p>[[input:ans1]] [[validation:ans1]]</p>
+
+<p> Find the span \(\langle C \rangle \).]]></text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format">
+      <text><![CDATA[<p> Recall that for a code \(C\) to be a linear code it needs to contain \((0,0,0)\). </p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <stackversion>
+      <text>2018080600</text>
+    </stackversion>
+    <questionvariables>
+      <text><![CDATA[a: rand([1,2]);
+b: rand([0,1,2]);
+c: rand([0,1,2]);
+d: rand([0,1,2]);
+e: rand([1,2]);
+
+x: [a,b,c];
+y: [d,e,b];
+z: [c,a,e];
+
+lincode: [["Yes", false], ["No", true]];]]></text>
+    </questionvariables>
+    <specificfeedback format="html">
+      <text>[[feedback:prt1]]</text>
+    </specificfeedback>
+    <questionnote>
+      <text>C= {@x@},{@y@},{@z@}</text>
+    </questionnote>
+    <questionsimplify>1</questionsimplify>
+    <assumepositive>0</assumepositive>
+    <assumereal>0</assumereal>
+    <prtcorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:green;"><i class="fa fa-check"></i></span> Correct answer, well done.]]></text>
+    </prtcorrect>
+    <prtpartiallycorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:orange;"><i class="fa fa-adjust"></i></span> Your answer is partially correct.]]></text>
+    </prtpartiallycorrect>
+    <prtincorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:red;"><i class="fa fa-times"></i></span> Incorrect answer.]]></text>
+    </prtincorrect>
+    <multiplicationsign>none</multiplicationsign>
+    <sqrtsign>1</sqrtsign>
+    <complexno>i</complexno>
+    <inversetrig>cos-1</inversetrig>
+    <matrixparens>[</matrixparens>
+    <variantsselectionseed></variantsselectionseed>
+    <input>
+      <name>ans1</name>
+      <type>dropdown</type>
+      <tans>lincode</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>0</mustverify>
+      <showvalidation>0</showvalidation>
+      <options></options>
+    </input>
+    <prt>
+      <name>prt1</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackvariables>
+        <text></text>
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>1</sans>
+        <tans>1</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt1-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text></text>
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt1-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text></text>
+        </falsefeedback>
+      </node>
+    </prt>
+  </question>
+
+<!-- question: 11115  -->
+  <question type="stack">
+    <name>
+      <text>NHS Numbers</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p> In the UK, a NHS number is a unique number given to an individual within England, Wales and the Isle of Man.  It consists of a  \(10\) digit number, \(x_1,...,x_{10}\) with \(0 \leq x_i \leq 9\).  \(x_{10}\) is a <b> check-digit, </b> which can detect if an error has been made in \(x_1,...,x_9\).  We calculate \(x_{10}\) by finding the remainder of \(10x_1+9x_2+...+2x_9\) mod \(11\).  If this number is \(10\), the number is not valid.</p>
+
+
+<p>Given the NHS number {@a@}{@b@}{@c@} {@d@}{@e@}{@f@} {@g@}{@h@}{@i@}\(x_{10}\) , find \(x_{10}\). <br> [[input:ans1]] [[validation:ans1]]</p>
+
+<p> Consider the NHS numbers as a code, \(C_{\text{NHS}} \subseteq \mathbb{F}_{11}^{10}\). <br>
+Is \(C_{\text{NHS}}\) a linear code? [[input:ans2]][[validation:ans2]]</p> <br>
+
+<p>  Write down its check-matrix \(H\): what is \(d(C)\)? <br>
+\(H=\) [[input:ans3]][[validation:ans3]] <br> <br>
+\(d(C)=\)[[input:ans4]][[validation:ans4]] </p>]]></text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <stackversion>
+      <text>2018080600</text>
+    </stackversion>
+    <questionvariables>
+      <text><![CDATA[a: rand([4,6,7,8]);
+b: rand(10);
+c: rand(10);
+d: rand(10);
+e: rand(10);
+f: rand(10);
+g: rand(10);
+h: rand(10);
+i: rand(10);
+NHS: [a,b,c,d,e,f,g,h,i]
+
+Check: 10*NHS[1]+9*NHS[2]+8*NHS[3]+7*NHS[4]+6*NHS[5]+5*NHS[6]+4*NHS[7]+3*NHS[8]+2*NHS[9]
+x: mod(Check,11)
+
+answer2: [["Yes", true],["No", false]]
+answer3: matrix([1,2,3,4,5,6,7,8,9,10]) ]]></text>
+    </questionvariables>
+    <specificfeedback format="html">
+      <text>[[feedback:prt1]]</text>
+    </specificfeedback>
+    <questionnote>
+      <text>{@NHS@},{@x@}</text>
+    </questionnote>
+    <questionsimplify>1</questionsimplify>
+    <assumepositive>0</assumepositive>
+    <assumereal>0</assumereal>
+    <prtcorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:green;"><i class="fa fa-check"></i></span> Correct answer, well done.]]></text>
+    </prtcorrect>
+    <prtpartiallycorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:orange;"><i class="fa fa-adjust"></i></span> Your answer is partially correct.]]></text>
+    </prtpartiallycorrect>
+    <prtincorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:red;"><i class="fa fa-times"></i></span> Incorrect answer.]]></text>
+    </prtincorrect>
+    <multiplicationsign>none</multiplicationsign>
+    <sqrtsign>1</sqrtsign>
+    <complexno>i</complexno>
+    <inversetrig>cos-1</inversetrig>
+    <matrixparens>[</matrixparens>
+    <variantsselectionseed></variantsselectionseed>
+    <input>
+      <name>ans1</name>
+      <type>algebraic</type>
+      <tans>x</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans2</name>
+      <type>dropdown</type>
+      <tans>answer2</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans3</name>
+      <type>matrix</type>
+      <tans>answer3</tans>
+      <boxsize>1</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options></options>
+    </input>
+    <input>
+      <name>ans4</name>
+      <type>algebraic</type>
+      <tans>1</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options></options>
+    </input>
+    <prt>
+      <name>prt1</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackvariables>
+        <text></text>
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans1</sans>
+        <tans>x</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt1-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text></text>
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt1-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text></text>
+        </falsefeedback>
+      </node>
+    </prt>
+    <deployedseed>1137539243</deployedseed>
+    <deployedseed>635564970</deployedseed>
+    <deployedseed>1958153362</deployedseed>
+    <deployedseed>427375061</deployedseed>
+    <deployedseed>951087260</deployedseed>
+    <deployedseed>272019458</deployedseed>
+    <deployedseed>461592724</deployedseed>
+    <deployedseed>15830340</deployedseed>
+    <deployedseed>115580908</deployedseed>
+    <deployedseed>1914797877</deployedseed>
+    <deployedseed>155829551</deployedseed>
+    <deployedseed>800484998</deployedseed>
+    <deployedseed>804858967</deployedseed>
+    <deployedseed>469592299</deployedseed>
+    <deployedseed>802316761</deployedseed>
+    <deployedseed>1924292130</deployedseed>
+    <deployedseed>1102508355</deployedseed>
+    <deployedseed>988463481</deployedseed>
+    <deployedseed>1486548092</deployedseed>
+    <deployedseed>774160450</deployedseed>
+    <deployedseed>497129859</deployedseed>
+    <deployedseed>2027831586</deployedseed>
+    <deployedseed>1025679734</deployedseed>
+    <deployedseed>1374990646</deployedseed>
+    <deployedseed>416698762</deployedseed>
+    <deployedseed>103042721</deployedseed>
+    <deployedseed>80122211</deployedseed>
+    <deployedseed>1416362620</deployedseed>
+    <deployedseed>1979045370</deployedseed>
+    <deployedseed>958497361</deployedseed>
+    <deployedseed>1557179821</deployedseed>
+    <deployedseed>438903730</deployedseed>
+    <deployedseed>759094381</deployedseed>
+    <deployedseed>1584793470</deployedseed>
+    <deployedseed>1973324906</deployedseed>
+    <deployedseed>923805090</deployedseed>
+    <deployedseed>1351732037</deployedseed>
+    <deployedseed>516761702</deployedseed>
+    <deployedseed>1111958324</deployedseed>
+    <deployedseed>1270881515</deployedseed>
+    <deployedseed>1142911928</deployedseed>
+    <deployedseed>318695954</deployedseed>
+    <deployedseed>1578325246</deployedseed>
+    <deployedseed>823467340</deployedseed>
+    <deployedseed>1867009368</deployedseed>
+    <deployedseed>27860444</deployedseed>
+    <deployedseed>2019470353</deployedseed>
+    <deployedseed>1404574789</deployedseed>
+    <deployedseed>1702924731</deployedseed>
+    <deployedseed>1803467507</deployedseed>
+  </question>
+
+<!-- question: 6983  -->
+  <question type="stack">
+    <name>
+      <text>Test Q1</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p></p><p>Expand the brackets in the expression</p><p>{@exp@}.</p><p>[[input:ans1]] [[validation:ans1]]</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <stackversion>
+      <text>2018080600</text>
+    </stackversion>
+    <questionvariables>
+      <text>ordergreat(x) ;
+
+nn: rand_with_prohib(-9,9, [-1,0,1] ) ;
+term: (x+nn*y) ;
+exp: term^2 ;
+ans: expand(exp) ;
+
+simp: false ;
+work: x*x+x*nn*y+x*nn*y+y*y</text>
+    </questionvariables>
+    <specificfeedback format="html">
+      <text>[[feedback:prt1]]</text>
+    </specificfeedback>
+    <questionnote>
+      <text>{@exp@}</text>
+    </questionnote>
+    <questionsimplify>1</questionsimplify>
+    <assumepositive>0</assumepositive>
+    <assumereal>0</assumereal>
+    <prtcorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:green;"><i class="fa fa-check"></i></span> Correct answer, well done.]]></text>
+    </prtcorrect>
+    <prtpartiallycorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:orange;"><i class="fa fa-adjust"></i></span> Your answer is partially correct.]]></text>
+    </prtpartiallycorrect>
+    <prtincorrect format="html">
+      <text><![CDATA[<span style="font-size: 1.5em; color:red;"><i class="fa fa-times"></i></span> Incorrect answer.]]></text>
+    </prtincorrect>
+    <multiplicationsign>none</multiplicationsign>
+    <sqrtsign>1</sqrtsign>
+    <complexno>i</complexno>
+    <inversetrig>cos-1</inversetrig>
+    <matrixparens>[</matrixparens>
+    <variantsselectionseed></variantsselectionseed>
+    <input>
+      <name>ans1</name>
+      <type>algebraic</type>
+      <tans>ans</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>0</strictsyntax>
+      <insertstars>2</insertstars>
+      <syntaxhint></syntaxhint>
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords></forbidwords>
+      <allowwords></allowwords>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>1</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options></options>
+    </input>
+    <prt>
+      <name>prt1</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackvariables>
+        <text></text>
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans1</sans>
+        <tans>exp</tans>
+        <testoptions></testoptions>
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty></truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt1-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text><![CDATA[<p dir="ltr" style="text-align: left;">You have expanded the brackets correctly!</p>]]></text>
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty></falsepenalty>
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt1-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text><![CDATA[<p dir="ltr" style="text-align: left;">Have you expanded and included all terms?</p>]]></text>
+        </falsefeedback>
+      </node>
+    </prt>
+  </question>
+
+</quiz>
